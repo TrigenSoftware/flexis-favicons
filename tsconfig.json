@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"declarationMap": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"target": "esnext",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitAny": false,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"inlineSourceMap": true,
+		"lib": [
+			"esnext"
+		],
+		"typeRoots": [
+			"./types"
+		]
+	},
+	"include": [
+		"src/index.ts"
+	],
+	"exclude": [
+		"lib/**/*"
+	]
+}
