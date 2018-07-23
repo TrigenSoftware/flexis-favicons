@@ -38,7 +38,7 @@ Module exposes next API:
 ```js
 export default FaviconsGenerator;
 export {
-    getHtmlHeadersHtml
+    getHtmlHeadersMarkup
 };
 ```
 

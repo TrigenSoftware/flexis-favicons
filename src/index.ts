@@ -25,7 +25,7 @@ import renderIcon from './renderIcon';
 import htmlHeaders, { IHtmlHeader } from './htmlHeaders';
 
 export {
-	default as getHtmlHeadersHtml
+	default as getHtmlHeadersMarkup
 } from './getHtmlHeadersMarkup';
 
 interface IConfig {
