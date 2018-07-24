@@ -1,22 +1,19 @@
-import { promisify } from 'util';
 import { join } from 'path';
 import Vinyl from 'vinyl';
-import syncSizeOf from 'image-size';
-
-const sizeOf = promisify(syncSizeOf);
+import sizeOf from 'image-size';
 
 /**
  * Attach image metadata to the vinyl file.
  * @param  source - Image file.
  * @return Source image file with attached metadata.
  */
-export async function attachMetadata(source: Vinyl) {
+export function attachMetadata(source: Vinyl) {
 
 	if (typeof source.metadata === 'object') {
 		return source;
 	}
 
-	source.metadata = await sizeOf(source.contents as Buffer);
+	source.metadata = sizeOf(source.contents as Buffer);
 
 	return source;
 }

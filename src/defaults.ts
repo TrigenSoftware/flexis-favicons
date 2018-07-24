@@ -1,6 +1,6 @@
 
 export const icons = {
-	favicons: true,
+	favicon: true,
 	android: true,
 	apple: true,
 	appleStartup: true

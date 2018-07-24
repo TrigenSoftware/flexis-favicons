@@ -4,6 +4,7 @@ import Jimp from 'jimp';
 import svg2imgCb from 'svg2img';
 import color from 'tinycolor2';
 import { isSvg } from './extensions';
+import { attachMetadata } from './helpers';
 
 interface IRenderConfig {
 	rotate: boolean;
@@ -120,7 +121,7 @@ async function createSprite(
 	);
 
 	if (rotate) {
-		sprite.rotate(ROTATE_DEGREES, false);
+		sprite.rotate(ROTATE_DEGREES);
 	}
 
 	return sprite;
@@ -144,6 +145,7 @@ async function getSuitableSourceBuffer(
 	if (svgSource) {
 
 		const icon = await svg2img((svgSource.contents as Buffer).toString('utf8'), {
+			preserveAspectRatio: 'xMidYMid meet',
 			width,
 			height
 		});
@@ -153,6 +155,8 @@ async function getSuitableSourceBuffer(
 
 	const maximumSide = Math.max(width, height);
 	const nearestIcon = sources.reduce((nearestIcon, source) => {
+
+		attachMetadata(source);
 
 		const {
 			width: nearestIconWidth,

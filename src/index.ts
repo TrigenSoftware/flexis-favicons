@@ -82,7 +82,7 @@ export default class FaviconsGenerator {
 				throw new Error(`"${sourceType}" is not supported.`);
 			}
 
-			await attachMetadata(source);
+			attachMetadata(source);
 		}
 
 		const {
@@ -161,20 +161,19 @@ export default class FaviconsGenerator {
 			manifest,
 			icons
 		} = this.config;
-		const iconConfig = icons[iconsType];
+		const iconConfig = getCompleteIconConfig(iconsType, icons, manifest);
 
-		if (!iconConfig) {
+		if (iconConfig === null) {
 			return;
 		}
 
-		const completeIconConfig = getCompleteIconConfig(iconsType, iconConfig, manifest);
 		const iconsOfTypeToGenerate = iconsToGenerate[iconsType];
 
 		for (const filename in iconsOfTypeToGenerate) {
 			yield this.generateIcon(
 				filename,
 				sources,
-				completeIconConfig,
+				iconConfig,
 				iconsOfTypeToGenerate[filename]
 			);
 		}

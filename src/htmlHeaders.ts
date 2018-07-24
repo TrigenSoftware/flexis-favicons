@@ -23,19 +23,19 @@ export interface IHtmlHeader {
 }
 
 export default {
-	favicons:     faviconsHeaders,
+	favicon:      faviconHeaders,
 	android:      androidHeaders,
 	apple:        appleHeaders,
 	appleStartup: appleStartupHeaders
 };
 
 /**
- * Get "favicons" headers.
+ * Get "favicon" headers.
  * @param  headersConfig - Config params.
  * @return Array of headers objects.
  */
-function faviconsHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
-	return Object.entries(iconsToGenerate.favicons).map(([filename, {
+function faviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
+	return Object.entries(iconsToGenerate.favicon).map(([filename, {
 		sizes,
 		width,
 		height
