@@ -2,7 +2,7 @@ import Vinyl from 'vinyl';
 import toIco from 'to-ico';
 import {
 	extensions,
-	typeIsSupported,
+	isSupportedType,
 	isIco
 } from './extensions';
 import { IManifestConfig } from './manifest';
@@ -78,7 +78,7 @@ export default class FaviconsGenerator {
 
 			const sourceType = source.extname.replace(/^\./, '') as SupportedExtension;
 
-			if (!typeIsSupported(sourceType)) {
+			if (!isSupportedType(sourceType)) {
 				throw new Error(`"${sourceType}" is not supported.`);
 			}
 

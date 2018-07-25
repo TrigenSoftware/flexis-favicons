@@ -10,7 +10,7 @@ export const extensions = {
  * @param  type - Image extension without dot.
  * @return Image type is supported or not.
  */
-export function typeIsSupported(type: string): boolean {
+export function isSupportedType(type: string): boolean {
 	return extensions.hasOwnProperty(type);
 }
 

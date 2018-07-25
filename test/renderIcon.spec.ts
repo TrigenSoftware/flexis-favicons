@@ -1,10 +1,17 @@
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import renderIcon from '../src/renderIcon';
 import {
 	svg,
 	png
 } from './favicon';
+
+jest.setTimeout(60000);
+
+function sha1(buffer: Buffer): string {
+	return crypto.createHash('sha1').update(buffer).digest('hex');
+}
 
 describe('renderIcon', () => {
 
@@ -18,8 +25,8 @@ describe('renderIcon', () => {
 			offset:     20
 		});
 
-		fs.writeFileSync(path.join(__dirname, 'renderIcon_svg.png'), icon);
-		expect(JSON.stringify(icon)).toMatchSnapshot();
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
 	});
 
 	it('should render correct icon from png', async () => {
@@ -32,8 +39,8 @@ describe('renderIcon', () => {
 			offset:     20
 		});
 
-		fs.writeFileSync(path.join(__dirname, 'renderIcon_png.png'), icon);
-		expect(JSON.stringify(icon)).toMatchSnapshot();
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
 	});
 
 	it('should render correct rotated icon from svg', async () => {
@@ -46,8 +53,8 @@ describe('renderIcon', () => {
 			offset:     25
 		});
 
-		fs.writeFileSync(path.join(__dirname, 'renderIcon_svg_rotated.png'), icon);
-		expect(JSON.stringify(icon)).toMatchSnapshot();
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg_rotated.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
 	});
 
 	it('should render correct rotated icon from png', async () => {
@@ -60,7 +67,35 @@ describe('renderIcon', () => {
 			offset:     25
 		});
 
-		fs.writeFileSync(path.join(__dirname, 'renderIcon_png_rotated.png'), icon);
-		expect(JSON.stringify(icon)).toMatchSnapshot();
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png_rotated.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
+	});
+
+	it('should render correct rotated non-square icon from svg', async () => {
+
+		const icon = await renderIcon([svg], {
+			rotate:     true,
+			width:      256,
+			height:     512,
+			background: 'blue',
+			offset:     0
+		});
+
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg_rotated_non-square.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
+	});
+
+	it('should render correct rotated non-square icon from png', async () => {
+
+		const icon = await renderIcon([svg], {
+			rotate:     true,
+			width:      256,
+			height:     512,
+			background: 'blue',
+			offset:     0
+		});
+
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png_rotated_non-square.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
 	});
 });

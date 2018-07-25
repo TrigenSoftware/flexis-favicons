@@ -121,7 +121,7 @@ async function createSprite(
 	);
 
 	if (rotate) {
-		sprite.rotate(ROTATE_DEGREES);
+		sprite.rotate(ROTATE_DEGREES, false);
 	}
 
 	return sprite;
