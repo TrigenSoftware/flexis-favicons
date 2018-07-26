@@ -10,14 +10,12 @@ import { attachMetadata } from '../src/helpers';
 import FaviconsGenerator from '../src';
 import { svg } from './favicon';
 
-jest.setTimeout(600000);
-
 async function vinylsFromAsyncIterator(iterator: AsyncIterableIterator<Vinyl>): Promise<Vinyl[]> {
 
 	const vinyls: Vinyl[] = [];
 
 	for await (const vinyl of iterator) {
-		attachMetadata(vinyl);
+		await attachMetadata(vinyl);
 		vinyls.push(vinyl);
 		fs.writeFileSync(
 			path.join(__dirname, 'artifacts', `FaviconsGenerator_${vinyl.basename}`),
@@ -29,6 +27,8 @@ async function vinylsFromAsyncIterator(iterator: AsyncIterableIterator<Vinyl>): 
 }
 
 describe('FaviconsGenerator', () => {
+
+	jest.setTimeout(30000);
 
 	const manifest = {
 		background_color: 'red'

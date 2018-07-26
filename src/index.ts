@@ -82,7 +82,7 @@ export default class FaviconsGenerator {
 				throw new Error(`"${sourceType}" is not supported.`);
 			}
 
-			attachMetadata(source);
+			await attachMetadata(source);
 		}
 
 		const {

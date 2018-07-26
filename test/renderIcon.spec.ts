@@ -7,13 +7,13 @@ import {
 	png
 } from './favicon';
 
-jest.setTimeout(60000);
-
 function sha1(buffer: Buffer): string {
 	return crypto.createHash('sha1').update(buffer).digest('hex');
 }
 
 describe('renderIcon', () => {
+
+	jest.setTimeout(30000);
 
 	it('should render correct icon from svg', async () => {
 
@@ -87,7 +87,7 @@ describe('renderIcon', () => {
 
 	it('should render correct rotated non-square icon from png', async () => {
 
-		const icon = await renderIcon([svg], {
+		const icon = await renderIcon([png], {
 			rotate:     true,
 			width:      256,
 			height:     512,
@@ -96,6 +96,26 @@ describe('renderIcon', () => {
 		});
 
 		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png_rotated_non-square.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
+	});
+
+	it('should render better quality from svg source', async () => {
+
+		const config = {
+			rotate:     false,
+			width:      1280,
+			height:     1280,
+			background: 'blue',
+			offset:     5
+		};
+		let icon = await renderIcon([png], config);
+
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png-quality.png'), icon);
+		expect(sha1(icon)).toMatchSnapshot();
+
+		icon = await renderIcon([svg], config);
+
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg-quality.png'), icon);
 		expect(sha1(icon)).toMatchSnapshot();
 	});
 });

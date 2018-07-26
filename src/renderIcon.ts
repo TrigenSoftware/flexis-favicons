@@ -1,8 +1,8 @@
 import { promisify } from 'util';
 import Vinyl from 'vinyl';
-import Jimp from 'jimp';
+import Sharp from 'sharp';
 import svg2imgCb from 'svg2img';
-import color from 'tinycolor2';
+import { ISize } from './icons';
 import { isSvg } from './extensions';
 import { attachMetadata } from './helpers';
 
@@ -14,29 +14,11 @@ interface IRenderConfig {
 	offset: number;
 }
 
-const RGB_MAX = 255;
 const PERCENTS_100 = 100;
 const TWICE = 2;
 const ROTATE_DEGREES = 90;
 
 const svg2img = promisify(svg2imgCb);
-
-/**
- * Color string to integer.
- * @param  colorSource - Color string.
- * @return Color integer.
- */
-function parseColor(colorSource: string): number {
-
-	const {
-		r,
-		g,
-		b,
-		a
-	} = color(colorSource).toRgb();
-
-	return Jimp.rgbaToInt(r, g, b, a * RGB_MAX);
-}
 
 /**
  * Render icon.
@@ -56,10 +38,11 @@ export default async function renderIcon(sources: Vinyl[], {
 	const offsetPx = Math.round(maximumSide / PERCENTS_100 * offset) || 0;
 	const canvas = await createCanvas(width, height, background);
 	const sprite = await createSprite(sources, rotate, width, height, offsetPx);
+	const renderedSprite = await sprite.png().toBuffer();
 
-	canvas.composite(sprite, offsetPx, offsetPx);
+	canvas.overlayWith(renderedSprite);
 
-	return getBuffer(canvas);
+	return canvas.png().toBuffer();
 }
 
 /**
@@ -74,21 +57,13 @@ function createCanvas(
 	height: number,
 	background: string
 ) {
-	return new Promise<Jimp>((resolve, reject) => {
-		new Jimp(
+	return Sharp(undefined, {
+		create: {
 			width,
 			height,
-			parseColor(background),
-			(error, canvas) => {
-
-				if (error) {
-					reject(error);
-					return;
-				}
-
-				resolve(canvas);
-			}
-		);
+			background,
+			channels: 4
+		}
 	});
 }
 
@@ -112,17 +87,15 @@ async function createSprite(
 	const spriteWidth = width - offset * TWICE;
 	const spriteHeight = height - offset * TWICE;
 	const source = await getSuitableSourceBuffer(sources, spriteWidth, spriteHeight);
-	const sprite = await Jimp.read(source);
-
-	sprite.contain(
-		spriteWidth,
-		spriteHeight,
-		Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE
-	);
+	const sprite = Sharp(source);
 
 	if (rotate) {
-		sprite.rotate(ROTATE_DEGREES, false);
+		sprite.rotate(ROTATE_DEGREES);
 	}
+
+	sprite
+		.resize(spriteWidth, spriteHeight)
+		.max();
 
 	return sprite;
 }
@@ -138,25 +111,31 @@ async function getSuitableSourceBuffer(
 	sources: Vinyl[],
 	width: number,
 	height: number
-) {
+): Promise<Buffer> {
 
 	const svgSource = sources.find(({ basename }) => isSvg(basename));
 
 	if (svgSource) {
 
-		const icon = await svg2img((svgSource.contents as Buffer).toString('utf8'), {
+		await attachMetadata(svgSource);
+
+		const icon: Buffer = await svg2img((svgSource.contents as Buffer).toString('utf8'), {
 			preserveAspectRatio: 'xMidYMid meet',
-			width,
-			height
+			...getContainSize({
+				width,
+				height
+			}, svgSource.metadata)
 		});
 
 		return icon;
 	}
 
+	for (const source of sources) {
+		await attachMetadata(source);
+	}
+
 	const maximumSide = Math.max(width, height);
 	const nearestIcon = sources.reduce((nearestIcon, source) => {
-
-		attachMetadata(source);
 
 		const {
 			width: nearestIconWidth,
@@ -179,24 +158,33 @@ async function getSuitableSourceBuffer(
 		return nearestIcon;
 	}, sources[0]);
 
-	return nearestIcon.contents;
+	return nearestIcon.contents as Buffer;
 }
 
 /**
- * Helper to get buffer from Jimp.
- * @param  canvas - Jimp canvas.
- * @return Buffer.
+ * Get size of icon to contain in box.
+ * @param boxSize - Size of box.
+ * @param iconsSize - Size of icon.
  */
-function getBuffer(canvas: Jimp) {
-	return new Promise<Buffer>((resolve, reject) => {
-		canvas.getBuffer(Jimp.MIME_PNG, (error, buffer) => {
+function getContainSize(
+	{
+		width: boxWidth,
+		height: boxHeight
+	}: ISize,
+	{
+		width: iconWidth,
+		height: iconHeight
+	}: ISize
+): ISize {
 
-			if (error) {
-				reject(error);
-				return;
-			}
+	const minBoxSide = Math.min(boxWidth, boxHeight);
+	const isWidthMin = minBoxSide === boxWidth;
 
-			resolve(buffer);
-		});
-	});
+	return isWidthMin ? {
+		width:  boxWidth,
+		height: Math.round(iconHeight / iconWidth * boxWidth)
+	} : {
+		height: boxHeight,
+		width:  Math.round(iconWidth / iconHeight * boxHeight)
+	};
 }

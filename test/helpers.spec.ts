@@ -21,18 +21,18 @@ describe('Helpers', () => {
 
 		it('should attach correct metadata for png', async () => {
 
-			attachMetadata(png);
+			await attachMetadata(png);
 
-			expect(png.metadata.type).toBe('png');
+			expect(png.metadata.format).toBe('png');
 			expect(png.metadata.width).toBe(expectedSize.width);
 			expect(png.metadata.height).toBe(expectedSize.height);
 		});
 
 		it('should attach correct metadata for svg', async () => {
 
-			attachMetadata(svg);
+			await attachMetadata(svg);
 
-			expect(svg.metadata.type).toBe('svg');
+			expect(svg.metadata.format).toBe('svg');
 			expect(svg.metadata.width).toBe(expectedSize.width);
 			expect(svg.metadata.height).toBe(expectedSize.height);
 		});
@@ -40,7 +40,7 @@ describe('Helpers', () => {
 		it('shouldn\'t reattach metadata', async () => {
 
 			png.metadata = { mock: true };
-			attachMetadata(png);
+			await attachMetadata(png);
 
 			expect(png.metadata.mock).toBe(true);
 		});
@@ -48,7 +48,7 @@ describe('Helpers', () => {
 
 	describe('applyPath', () => {
 
-		it('shouldn\'t apply empty path', async () => {
+		it('shouldn\'t apply empty path', () => {
 
 			const filename = 'favicon.svg';
 			const fullpath = applyPath(undefined, filename);
@@ -56,7 +56,7 @@ describe('Helpers', () => {
 			expect(fullpath).toBe(filename);
 		});
 
-		it('should apply path', async () => {
+		it('should apply path', () => {
 
 			const path = 'app/favicons';
 			const filename = 'favicon.svg';

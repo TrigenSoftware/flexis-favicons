@@ -1,19 +1,28 @@
 import { join } from 'path';
 import Vinyl from 'vinyl';
-import sizeOf from 'image-size';
+import Sharp from 'sharp';
+import { isIco } from './extensions';
 
 /**
  * Attach image metadata to the vinyl file.
  * @param  source - Image file.
  * @return Source image file with attached metadata.
  */
-export function attachMetadata(source: Vinyl) {
+export async function attachMetadata(source: Vinyl) {
 
 	if (typeof source.metadata === 'object') {
 		return source;
 	}
 
-	source.metadata = sizeOf(source.contents as Buffer);
+	if (isIco(source.basename)) {
+		source.metadata = {
+			format: 'ico',
+			width:  16,
+			height: 16
+		};
+	} else {
+		source.metadata = await Sharp(source.contents as Buffer).metadata();
+	}
 
 	return source;
 }
