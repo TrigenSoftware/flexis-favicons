@@ -171,7 +171,7 @@ export default class FaviconsGenerator {
 		const iconConfig = getCompleteIconConfig(iconsType, icons, manifest);
 
 		if (iconConfig === null) {
-			return;
+			return undefined;
 		}
 
 		const iconsOfTypeToGenerate = iconsToGenerate[iconsType];
