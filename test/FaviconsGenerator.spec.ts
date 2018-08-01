@@ -134,4 +134,51 @@ describe('FaviconsGenerator', () => {
 			}
 		});
 	});
+
+	describe('#generateManifest', () => {
+
+		it('should return correct manifest', () => {
+
+			const manifest = {
+				name:             'App',
+				background_color: '#fff'
+			};
+			const favicons = new FaviconsGenerator({
+				manifest
+			});
+			const outputManifest = favicons.generateManifset();
+
+			expect(outputManifest.icons.length).toBe(9);
+			expect({
+				...defaultManifset,
+				...manifest,
+				icons: outputManifest.icons
+			}).toEqual(outputManifest);
+		});
+	});
+
+	describe('#generateHtmlHeaders', () => {
+
+		it('should return correct headers', () => {
+
+			const favicons = new FaviconsGenerator();
+			const headers = favicons.generateHtmlHeaders();
+
+			expect(headers.length).toBe(29);
+		});
+
+		it('should return headers with theme color and app name', () => {
+
+			const manifest = {
+				name:        'App',
+				theme_color: 'red'
+			};
+			const favicons = new FaviconsGenerator({
+				manifest
+			});
+			const headers = favicons.generateHtmlHeaders();
+
+			expect(headers.length).toBe(32);
+		});
+	});
 });

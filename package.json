@@ -1,7 +1,7 @@
 {
   "name": "@flexis/favicons",
   "version": "1.0.0",
-  "description": "Lib to generating favicons for modern web.",
+  "description": "Best lib to generating favicons for modern web.",
   "author": "dangreen",
   "license": "MIT",
   "repository": {
@@ -55,7 +55,7 @@
     "coveralls": "^3.0.0",
     "eslint": "^5.0.1",
     "eslint-config-trigen": "^3.2.0",
-    "husky": "^1.0.0-rc.10",
+    "husky": "^1.0.0-rc.13",
     "jest": "^23.3.0",
     "npm-check": "^5.7.1",
     "rollup": "^0.62.0",

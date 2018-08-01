@@ -13,6 +13,5 @@ export const manifest = {
 	// orientation: 'any',
 	// scope: '/',
 	// start_url: '/?homescreen=1',
-	background_color: '#fff',
-	theme_color: '#fff'
+	background_color: '#fff'
 };

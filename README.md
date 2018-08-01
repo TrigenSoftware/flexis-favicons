@@ -21,7 +21,7 @@
 [coverage]: https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg
 [coverage-url]: https://coveralls.io/r/TrigenSoftware/flexis-favicons
 
-Lib to generating favicons for modern web.
+Best lib to generating favicons for modern web.
 
 # Install
 

@@ -6,9 +6,11 @@ import {
 	iconsToGenerate
 } from './icons';
 
-interface IHeadersConfig {
-	path: string;
-	manifest: IManifestConfig;
+export interface IHeadersConfig {
+	path?: string;
+	manifest?: IManifestConfig;
+	webAppCapable?: 'yes'|'no';
+	webAppStatusBarStyle?: 'default'|'black'|'black-translucent';
 }
 
 export interface IHtmlHeader {
@@ -63,10 +65,11 @@ function faviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
  */
 function androidHeaders({
 	path,
+	webAppCapable = 'yes',
 	manifest: {
-		name: applicationName,
-		theme_color: themeColor
-	}
+		name: applicationName = null,
+		theme_color: themeColor = null
+	} = {}
 }: IHeadersConfig): IHtmlHeader[] {
 
 	const headers: IHtmlHeader[] = [
@@ -78,7 +81,7 @@ function androidHeaders({
 		{
 			tagName: 'meta',
 			name:    'mobile-web-app-capable',
-			content: 'yes'
+			content: webAppCapable
 		}
 	];
 
@@ -108,21 +111,23 @@ function androidHeaders({
  */
 function appleHeaders({
 	path,
+	webAppCapable = 'yes',
+	webAppStatusBarStyle = 'black-translucent',
 	manifest: {
-		name: applicationName
-	}
+		name: applicationName = null
+	} = {}
 }: IHeadersConfig): IHtmlHeader[] {
 
 	const headers: IHtmlHeader[] = [
 		{
 			tagName: 'meta',
-			name:   'apple-mobile-web-app-capable',
-			content: 'yes'
+			name:    'apple-mobile-web-app-capable',
+			content: webAppCapable
 		},
 		{
 			tagName: 'meta',
 			name:    'apple-mobile-web-app-status-bar-style',
-			content: 'black-translucent'
+			content: webAppStatusBarStyle
 		}
 	];
 

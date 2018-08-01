@@ -22,7 +22,10 @@ import {
 	manifest as defaultManifest
 } from './defaults';
 import renderIcon from './renderIcon';
-import htmlHeaders, { IHtmlHeader } from './htmlHeaders';
+import htmlHeaders, {
+	IHeadersConfig,
+	IHtmlHeader
+} from './htmlHeaders';
 
 export {
 	default as getHtmlHeadersMarkup
@@ -130,21 +133,25 @@ export default class FaviconsGenerator {
 
 	/**
 	 * Create HTML-headers for target icons.
+	 * @param  headersConfig - Custom headers config.
 	 * @return Array of headers objects. You can get HTML-markup with `getHtmlHeadersMarkup` helper.
 	 */
-	generateHtmlHeaders(): IHtmlHeader[] {
+	generateHtmlHeaders(headersConfig: IHeadersConfig = {}): IHtmlHeader[] {
 
 		const {
-			path,
-			manifest,
-			icons
-		} = this.config;
+			icons,
+			...config
+		} = {
+			...this.config,
+			...headersConfig,
+			manifest: {
+				...this.config.manifest,
+				...headersConfig.manifest
+			}
+		};
 		const headers = Object.entries(icons)
 			.filter(([, value]) => value)
-			.map(([type]) => htmlHeaders[type]({
-				path,
-				manifest
-			}));
+			.map(([type]) => htmlHeaders[type](config));
 
 		return [].concat(...headers);
 	}
