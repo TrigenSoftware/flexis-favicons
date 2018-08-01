@@ -1,7 +1,7 @@
 os: osx
 before_install:
   - brew update
-	- brew install cario
+  - brew install cario
 language: node_js
 node_js:
   - "node"
