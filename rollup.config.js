@@ -21,7 +21,10 @@ const plugins = [
 	commonjs(),
 	globals()
 ];
-const dependencies = [].concat(
+const dependencies = [
+	'path',
+	'util'
+].concat(
 	Object.keys(pkg.dependencies)
 );
 
