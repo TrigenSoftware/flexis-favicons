@@ -1,6 +1,6 @@
 {
   "name": "@flexis/favicons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Best lib to generating favicons for modern web.",
   "author": "dangreen",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "generator"
   ],
   "dependencies": {
-    "@babel/runtime-corejs2": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
     "@types/node": "^10.9.3",
     "@types/sharp": "^0.17.10",
     "@types/vinyl": "^2.0.2",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@babel/core": "7.0.0",
     "@types/jest": "^23.3.1",
-    "babel-preset-trigen": "^1.2.4",
+    "babel-preset-trigen": "^1.3.0",
     "browserslist-config-trigen": "^1.1.0",
     "coveralls": "^3.0.0",
     "eslint": "^5.4.0",

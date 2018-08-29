@@ -696,11 +696,10 @@
     js-levenshtein "^1.1.3"
     semver "^5.3.0"
 
-"@babel/runtime-corejs2@^7.0.0":
+"@babel/runtime@^7.0.0":
   version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs2/-/runtime-corejs2-7.0.0.tgz#786711ee099c2c2af7875638866c1259eff30a8c"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
   dependencies:
-    core-js "^2.5.7"
     regenerator-runtime "^0.12.0"
 
 "@babel/template@7.0.0-beta.44":
@@ -1203,9 +1202,9 @@ babel-preset-jest@^23.2.0:
     babel-plugin-jest-hoist "^23.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-trigen@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-1.2.4.tgz#4dd33810dfba787c9928deaedb96d61ec137b805"
+babel-preset-trigen@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-trigen/-/babel-preset-trigen-1.3.0.tgz#a05970c9a87844b724094e3684f9581b37896d13"
   dependencies:
     "@babel/plugin-proposal-async-generator-functions" "^7.0.0"
     "@babel/plugin-proposal-class-properties" "^7.0.0"
@@ -1736,7 +1735,7 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7:
+core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
