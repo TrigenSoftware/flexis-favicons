@@ -17,7 +17,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "generateDocs": "typedoc ./src --out ./docs --excludeExternals --mode modules; touch docs/.nojekyll",
+    "generateDocs": "typedoc ./src --out ./docs --ignoreCompilerErrors --excludeExternals --mode modules; touch docs/.nojekyll",
     "checkDeps": "npm-check -s; exit 0",
     "lint": "tslint -p . -t stylish 'src/**/*.{ts,tsx}'",
     "jest": "NODE_ENV=test jest -c jest.config.json",
