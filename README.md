@@ -1,5 +1,7 @@
 # @flexis/favicons
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/TrigenSoftware/flexis-favicons.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm]][npm-url]
 [![Node version][node]][node-url]
 [![Dependency status][deps]][deps-url]
