@@ -23,7 +23,7 @@
 
 Best lib to generating favicons for modern web.
 
-# Install
+## Install
 
 ```bash
 npm i -D @flexis/favicons
@@ -31,7 +31,7 @@ npm i -D @flexis/favicons
 yarn add -D @flexis/favicons
 ```
 
-# API
+## API
 
 Module exposes next API:
 
