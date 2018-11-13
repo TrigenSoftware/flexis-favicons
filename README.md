@@ -5,6 +5,7 @@
 [![Dependency status][deps]][deps-url]
 [![Build status][build]][build-url]
 [![Coverage status][coverage]][coverage-url]
+[![Greenkeeper badge][greenkeeper]][greenkeeper-url]
 
 [npm]: https://img.shields.io/npm/v/%40flexis/favicons.svg
 [npm-url]: https://www.npmjs.com/package/@flexis/favicons
@@ -20,6 +21,9 @@
 
 [coverage]: https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg
 [coverage-url]: https://coveralls.io/r/TrigenSoftware/flexis-favicons
+
+[greenkeeper]: https://badges.greenkeeper.io/TrigenSoftware/flexis-favicons.svg
+[greenkeeper-url]: https://greenkeeper.io/
 
 Best lib to generating favicons for modern web.
 
