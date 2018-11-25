@@ -153,8 +153,6 @@ function appleHeaders({
 	return headers;
 }
 
-const WIDTH_WITH_ORIENTATION = 400;
-
 /**
  * Calculate media query for apple startup image.
  * @param  iconToGenerateConfig - Config with icon info.
@@ -176,7 +174,7 @@ function getAppleStartupMediaQuery(
 	const deviceHeight = height / pixelRatio;
 	let query = `(device-width: ${deviceWidth}px) and (device-height: ${deviceHeight}px)`;
 
-	if (deviceWidth > WIDTH_WITH_ORIENTATION) {
+	if (typeof rotate === 'boolean') {
 		query += ` and (orientation: ${rotate ? 'landscape' : 'portrait'})`;
 	}
 

@@ -156,6 +156,10 @@ export const iconsToGenerate: IIconsToGenerate = {
 			height: 512
 		}
 	},
+	// Sources of information:
+	// - https://stackoverflow.com/a/19933647
+	// - https://docs.axway.com/bundle/Titanium_SDK_allOS_en/page/icons_and_splash_screens.html
+	// - https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
 	apple: {
 		// 'apple-touch-icon-57x57.png' - non-retina iPhone/iPod touch
 		// 'apple-touch-icon-60x60.png' - unknown or notification icon for native apps
@@ -190,6 +194,11 @@ export const iconsToGenerate: IIconsToGenerate = {
 		}
 		// 'apple-touch-icon-precomposed.png' - iOS < 7
 	},
+	// Sources of information:
+	// - https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
+	// - https://docs.axway.com/bundle/Titanium_SDK_allOS_en/page/icons_and_splash_screens.html
+	// - https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/
+	// - https://appsco.pe/developer/splash-screens
 	appleStartup: {
 		// iPhone 5
 		'apple-touch-startup-image-640x1136.png': {
@@ -207,7 +216,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-1242x2208.png': {
 			width: 1242,
 			height: 2208,
-			pixelRatio: 3
+			pixelRatio: 3,
+			rotate: false
 		},
 		'apple-touch-startup-image-2208x1242.png': {
 			width: 2208,
@@ -219,7 +229,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-1125x2436.png': {
 			width: 1125,
 			height: 2436,
-			pixelRatio: 3
+			pixelRatio: 3,
+			rotate: false
 		},
 		'apple-touch-startup-image-2436x1125.png': {
 			width: 2436,
@@ -231,7 +242,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-828x1792.png': {
 			width: 828,
 			height: 1792,
-			pixelRatio: 2
+			pixelRatio: 2,
+			rotate: false
 		},
 		'apple-touch-startup-image-1792x828.png': {
 			width: 1792,
@@ -243,7 +255,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-1242x2688.png': {
 			width: 1242,
 			height: 2688,
-			pixelRatio: 3
+			pixelRatio: 3,
+			rotate: false
 		},
 		'apple-touch-startup-image-2688x1242.png': {
 			width: 2688,
@@ -255,7 +268,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-1536x2048.png': {
 			width: 1536,
 			height: 2048,
-			pixelRatio: 2
+			pixelRatio: 2,
+			rotate: false
 		},
 		'apple-touch-startup-image-2048x1536.png': {
 			width: 2048,
@@ -267,7 +281,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-1668x2224.png': {
 			width: 1668,
 			height: 2224,
-			pixelRatio: 2
+			pixelRatio: 2,
+			rotate: false
 		},
 		'apple-touch-startup-image-2224x1668.png': {
 			width: 2224,
@@ -279,7 +294,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-1668x2388.png': {
 			width: 1668,
 			height: 2388,
-			pixelRatio: 2
+			pixelRatio: 2,
+			rotate: false
 		},
 		'apple-touch-startup-image-2388x1668.png': {
 			width: 2224,
@@ -291,7 +307,8 @@ export const iconsToGenerate: IIconsToGenerate = {
 		'apple-touch-startup-image-2048x2732.png': {
 			width: 2048,
 			height: 2732,
-			pixelRatio: 2
+			pixelRatio: 2,
+			rotate: false
 		},
 		'apple-touch-startup-image-2732x2048.png': {
 			width: 2732,
