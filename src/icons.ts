@@ -19,7 +19,8 @@ export interface ISize {
 
 export interface IIconToGenerateConfig extends ISize {
 	sizes?: ISize[];
-	rotate: boolean;
+	rotate?: boolean;
+	pixelRatio?: number;
 }
 
 interface IIconsToGenerate {
@@ -106,179 +107,197 @@ export const iconsToGenerate: IIconsToGenerate = {
 					width: 64,
 					height: 64
 				}
-			],
-			rotate: false
+			]
 		},
 		'favicon-16x16.png': {
 			width: 16,
-			height: 16,
-			rotate: false
+			height: 16
 		},
 		'favicon-32x32.png': {
 			width: 32,
-			height: 32,
-			rotate: false
+			height: 32
 		}
 	},
 	android: {
 		'android-chrome-36x36.png': {
 			width: 36,
-			height: 36,
-			rotate: false
+			height: 36
 		},
 		'android-chrome-48x48.png': {
 			width: 48,
-			height: 48,
-			rotate: false
+			height: 48
 		},
 		'android-chrome-72x72.png': {
 			width: 72,
-			height: 72,
-			rotate: false
+			height: 72
 		},
 		'android-chrome-96x96.png': {
 			width: 96,
-			height: 96,
-			rotate: false
+			height: 96
 		},
 		'android-chrome-144x144.png': {
 			width: 144,
-			height: 144,
-			rotate: false
+			height: 144
 		},
 		'android-chrome-192x192.png': {
 			width: 192,
-			height: 192,
-			rotate: false
+			height: 192
 		},
 		'android-chrome-256x256.png': {
 			width: 256,
-			height: 256,
-			rotate: false
+			height: 256
 		},
 		'android-chrome-384x384.png': {
 			width: 384,
-			height: 384,
-			rotate: false
+			height: 384
 		},
 		'android-chrome-512x512.png': {
 			width: 512,
-			height: 512,
-			rotate: false
+			height: 512
 		}
 	},
 	apple: {
-		'apple-touch-icon-57x57.png': {
-			width: 57,
-			height: 57,
-			rotate: false
-		},
-		'apple-touch-icon-60x60.png': {
-			width: 60,
-			height: 60,
-			rotate: false
-		},
-		'apple-touch-icon-72x72.png': {
-			width: 72,
-			height: 72,
-			rotate: false
-		},
-		'apple-touch-icon-76x76.png': {
-			width: 76,
-			height: 76,
-			rotate: false
-		},
-		'apple-touch-icon-114x114.png': {
-			width: 114,
-			height: 114,
-			rotate: false
-		},
+		// 'apple-touch-icon-57x57.png' - non-retina iPhone/iPod touch
+		// 'apple-touch-icon-60x60.png' - unknown or notification icon for native apps
+		// 'apple-touch-icon-72x72.png' - non-retina iPad
+		// 'apple-touch-icon-76x76.png' - also non-retina iPad
+		// 'apple-touch-icon-114x114.png' - retina iPhone with iOS < 7
+		// modern retina iPhone
 		'apple-touch-icon-120x120.png': {
 			width: 120,
-			height: 120,
-			rotate: false
+			height: 120
 		},
-		'apple-touch-icon-144x144.png': {
-			width: 144,
-			height: 144,
-			rotate: false
-		},
+		// 'apple-touch-icon-144x144.png' - retina iPad with iOS < 7
+		// modern retina iPad
 		'apple-touch-icon-152x152.png': {
 			width: 152,
-			height: 152,
-			rotate: false
+			height: 152
 		},
+		// iPad Pro
 		'apple-touch-icon-167x167.png': {
 			width: 167,
-			height: 167,
-			rotate: false
+			height: 167
 		},
+		// iPhone X, iPhone [N] Plus
 		'apple-touch-icon-180x180.png': {
 			width: 180,
-			height: 180,
-			rotate: false
+			height: 180
 		},
+		// generic?
 		'apple-touch-icon.png': {
 			width: 180,
-			height: 180,
-			rotate: false
-		},
-		'apple-touch-icon-precomposed.png': {
-			width: 180,
-			height: 180,
-			rotate: false
+			height: 180
 		}
+		// 'apple-touch-icon-precomposed.png' - iOS < 7
 	},
 	appleStartup: {
-		'apple-touch-startup-image-320x460.png': {
-			width: 320,
-			height: 460,
-			rotate: false
-		},
-		'apple-touch-startup-image-640x920.png': {
+		// iPhone 5
+		'apple-touch-startup-image-640x1136.png': {
 			width: 640,
-			height: 920,
-			rotate: false
+			height: 1136,
+			pixelRatio: 2
 		},
-		'apple-touch-startup-image-640x1096.png': {
-			width: 640,
-			height: 1096,
-			rotate: false
-		},
-		'apple-touch-startup-image-748x1024.png': {
-			width: 748,
-			height: 1024,
-			rotate: true
-		},
-		'apple-touch-startup-image-750x1294.png': {
+		// iPhone
+		'apple-touch-startup-image-750x1334.png': {
 			width: 750,
-			height: 1294,
-			rotate: false
+			height: 1334,
+			pixelRatio: 2
 		},
-		'apple-touch-startup-image-768x1004.png': {
-			width: 768,
-			height: 1004,
-			rotate: false
-		},
-		'apple-touch-startup-image-1182x2208.png': {
-			width: 1182,
-			height: 2208,
-			rotate: true
-		},
-		'apple-touch-startup-image-1242x2148.png': {
+		// iPhone [N] Plus
+		'apple-touch-startup-image-1242x2208.png': {
 			width: 1242,
-			height: 2148,
-			rotate: false
+			height: 2208,
+			pixelRatio: 3
 		},
-		'apple-touch-startup-image-1496x2048.png': {
-			width: 1496,
-			height: 2048,
+		'apple-touch-startup-image-2208x1242.png': {
+			width: 2208,
+			height: 1242,
+			pixelRatio: 3,
 			rotate: true
 		},
-		'apple-touch-startup-image-1536x2008.png': {
+		// iPhone X
+		'apple-touch-startup-image-1125x2436.png': {
+			width: 1125,
+			height: 2436,
+			pixelRatio: 3
+		},
+		'apple-touch-startup-image-2436x1125.png': {
+			width: 2436,
+			height: 1125,
+			pixelRatio: 3,
+			rotate: true
+		},
+		// iPhone Xr
+		'apple-touch-startup-image-828x1792.png': {
+			width: 828,
+			height: 1792,
+			pixelRatio: 2
+		},
+		'apple-touch-startup-image-1792x828.png': {
+			width: 1792,
+			height: 828,
+			pixelRatio: 2,
+			rotate: true
+		},
+		// iPhone Xs Max
+		'apple-touch-startup-image-1242x2688.png': {
+			width: 1242,
+			height: 2688,
+			pixelRatio: 3
+		},
+		'apple-touch-startup-image-2688x1242.png': {
+			width: 2688,
+			height: 1242,
+			pixelRatio: 3,
+			rotate: true
+		},
+		// iPad Mini, Air
+		'apple-touch-startup-image-1536x2048.png': {
 			width: 1536,
-			height: 2008,
-			rotate: false
+			height: 2048,
+			pixelRatio: 2
+		},
+		'apple-touch-startup-image-2048x1536.png': {
+			width: 2048,
+			height: 1536,
+			pixelRatio: 2,
+			rotate: true
+		},
+		// iPad Pro 10.5"
+		'apple-touch-startup-image-1668x2224.png': {
+			width: 1668,
+			height: 2224,
+			pixelRatio: 2
+		},
+		'apple-touch-startup-image-2224x1668.png': {
+			width: 2224,
+			height: 1668,
+			pixelRatio: 2,
+			rotate: true
+		},
+		// iPad Pro 11"
+		'apple-touch-startup-image-1668x2388.png': {
+			width: 1668,
+			height: 2388,
+			pixelRatio: 2
+		},
+		'apple-touch-startup-image-2388x1668.png': {
+			width: 2224,
+			height: 2388,
+			pixelRatio: 2,
+			rotate: true
+		},
+		// iPad Pro 12.9"
+		'apple-touch-startup-image-2048x2732.png': {
+			width: 2048,
+			height: 2732,
+			pixelRatio: 2
+		},
+		'apple-touch-startup-image-2732x2048.png': {
+			width: 2732,
+			height: 2048,
+			pixelRatio: 2,
+			rotate: true
 		}
 	}
 };
