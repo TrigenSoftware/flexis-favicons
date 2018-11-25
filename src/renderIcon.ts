@@ -95,6 +95,7 @@ async function createSprite(
 
 	sprite
 		.resize(spriteWidth, spriteHeight)
+		// @ts-ignore
 		.max();
 
 	return sprite;
