@@ -1,7 +1,6 @@
 import { applyPath } from './helpers';
 import { IManifestConfig } from './manifest';
 import {
-	ISize,
 	IIconToGenerateConfig,
 	iconsToGenerate
 } from './icons';
