@@ -154,76 +154,36 @@ function appleHeaders({
 	return headers;
 }
 
-const appleStartupDeviceSizes: ISize[] = [
-	{
-		width:  320,
-		height: 480
-	},
-	{
-		width:  320,
-		height: 480
-	},
-	{
-		width:  320,
-		height: 568
-	},
-	{
-		width:  375,
-		height: 667
-	},
-	{
-		width:  414,
-		height: 736
-	},
-	{
-		width:  414,
-		height: 736
-	},
-	{
-		width:  768,
-		height: 1024
-	},
-	{
-		width:  768,
-		height: 1024
-	},
-	{
-		width:  768,
-		height: 1024
-	},
-	{
-		width:  768,
-		height: 1024
-	}
-];
-
 const WIDTH_WITH_ORIENTATION = 400;
 
 /**
  * Calculate media query for apple startup image.
  * @param  iconToGenerateConfig - Config with icon info.
- * @param  deviceSize - Device screen size.
  * @return Media query for device.
  */
 function getAppleStartupMediaQuery(
 	{
 		width,
+		height,
+		pixelRatio: maybePixelRatio,
 		rotate
-	}: IIconToGenerateConfig,
-	{
-		width: deviceWidth,
-		height: deviceHeight
-	}: ISize
+	}: IIconToGenerateConfig
 ) {
 
-	const pixelRatio = Math.round(width / deviceWidth);
+	const pixelRatio = typeof maybePixelRatio === 'number'
+		? maybePixelRatio
+		: 1;
+	const deviceWidth = width / pixelRatio;
+	const deviceHeight = height / pixelRatio;
 	let query = `(device-width: ${deviceWidth}px) and (device-height: ${deviceHeight}px)`;
 
 	if (deviceWidth > WIDTH_WITH_ORIENTATION) {
 		query += ` and (orientation: ${rotate ? 'landscape' : 'portrait'})`;
 	}
 
-	query += ` and (-webkit-device-pixel-ratio: ${pixelRatio})`;
+	if (pixelRatio > 1) {
+		query += ` and (-webkit-device-pixel-ratio: ${pixelRatio})`;
+	}
 
 	return query;
 }
@@ -234,10 +194,10 @@ function getAppleStartupMediaQuery(
  * @return Array of headers objects.
  */
 function appleStartupHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
-	return Object.entries(iconsToGenerate.appleStartup).map(([filename, config], i) => ({
+	return Object.entries(iconsToGenerate.appleStartup).map(([filename, config]) => ({
 		tagName: 'link',
 		rel:     'apple-touch-startup-image',
-		media:   getAppleStartupMediaQuery(config, appleStartupDeviceSizes[i]),
+		media:   getAppleStartupMediaQuery(config),
 		href:    applyPath(path, filename)
 	}));
 }
