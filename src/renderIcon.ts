@@ -93,10 +93,9 @@ async function createSprite(
 		sprite.rotate(ROTATE_DEGREES);
 	}
 
-	sprite
-		.resize(spriteWidth, spriteHeight)
-		// @ts-ignore
-		.max();
+	sprite.resize(spriteWidth, spriteHeight, {
+		fit: 'inside'
+	});
 
 	return sprite;
 }
