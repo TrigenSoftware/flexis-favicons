@@ -2003,7 +2003,7 @@ canvas@^2.0.0-alpha.13:
     nan "^2.11.1"
     node-pre-gyp "^0.11.0"
 
-canvg@^1.0.0:
+canvg@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/canvg/-/canvg-1.5.3.tgz#aad17915f33368bf8eb80b25d129e3ae922ddc5f"
   integrity sha512-7Gn2IuQzvUQWPIuZuFHrzsTM0gkPz2RRT9OcbdmA03jeKk8kltrD8gqUzNX15ghY/4PV5bbe5lmD6yDLDY6Ybg==
@@ -8374,15 +8374,15 @@ supports-color@^5.3.0, supports-color@^5.5.0:
   dependencies:
     has-flag "^3.0.0"
 
-svg2img@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/svg2img/-/svg2img-0.5.0.tgz#725934bc81879e05318c0de6cc499dcf8adc27b0"
-  integrity sha512-ICUmVyEOMpGZJYSTxYJc7AbOTZUvZKh8+IqHKhd3vm9I+To00EqBW4yyBxup8rK5PRHxGM/wOep0H9co5sForg==
+svg2img@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/svg2img/-/svg2img-0.6.0.tgz#0c11b3dcb99ce5f9d59e0393856634ff7da63909"
+  integrity sha512-n7ivmTvYxwpmqaGWEFSJPCNcgxx4g3XNJG7nZLJWr16ghl7Ln0HaO3bBRr48oahUsuT7zCm/iKQt5RmZHH+CyA==
   dependencies:
     atob "^2.0.0"
     btoa "^1.1.2"
     canvas "^2.0.0-alpha.13"
-    canvg "^1.0.0"
+    canvg "^1.5.3"
 
 svgo@^1.0.0:
   version "1.1.1"
