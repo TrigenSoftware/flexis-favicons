@@ -17,11 +17,11 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "generateDocs": "typedoc ./src --out ./docs --ignoreCompilerErrors --excludeExternals --mode modules; touch docs/.nojekyll",
     "lint": "tslint -p . -t stylish 'src/**/*.{ts,tsx}'",
     "jest": "NODE_ENV=test jest -c jest.config.json",
     "checkSize": "size-limit",
     "test": "npm run lint && npm run jest && npm run build && npm run checkSize",
+    "build:docs": "typedoc ./src --out ./docs --ignoreCompilerErrors --excludeExternals --mode modules; touch docs/.nojekyll",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "coverage": "cat ./coverage/lcov.info | coveralls",
