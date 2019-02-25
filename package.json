@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrigenSoftware/flexis-favicons.git"
+    "url": "https://github.com/TrigenSoftware/flexis-favicons"
   },
   "bugs": {
     "url": "https://github.com/TrigenSoftware/flexis-favicons/issues"
