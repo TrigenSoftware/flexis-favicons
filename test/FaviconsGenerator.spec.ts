@@ -164,7 +164,7 @@ describe('FaviconsGenerator', () => {
 			const favicons = new FaviconsGenerator();
 			const headers = favicons.generateHtmlHeaders();
 
-			expect(headers.length).toBe(30);
+			expect(headers.length).toBe(27);
 		});
 
 		it('should return headers with theme color and app name', () => {
@@ -178,7 +178,7 @@ describe('FaviconsGenerator', () => {
 			});
 			const headers = favicons.generateHtmlHeaders();
 
-			expect(headers.length).toBe(33);
+			expect(headers.length).toBe(30);
 		});
 	});
 });
