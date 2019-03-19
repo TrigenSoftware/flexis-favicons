@@ -37,7 +37,7 @@
     "@types/node": "^10.12.18",
     "@types/sharp": "^0.21.0",
     "@types/vinyl": "^2.0.2",
-    "sharp": "^0.21.1",
+    "sharp": "^0.22.0",
     "svg2img": "^0.5.0",
     "to-ico": "^1.1.5",
     "vinyl": "^2.1.0"
