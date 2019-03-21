@@ -891,10 +891,10 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.1.tgz#48fd98c1561fe718b61733daed46ff115b496e18"
   integrity sha512-eqz8c/0kwNi/OEHQfvIuJVLTst3in0e7uTKeuY+WL/zfKn0xVujOTp42bS/vUUokhK5P2BppLd9JXMOMHcgbjA==
 
-"@types/sharp@^0.21.0":
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/@types/sharp/-/sharp-0.21.0.tgz#e364b345c70e5924a5c626aaccaa236e0cfc2455"
-  integrity sha512-BmsCha5/lx2Afz2zwNo9F2txlkZ9HQf49N94lzSFmj5Oc7NfRMZguwVIhytb65qdY2zNF+azovzDNso6JUZpOw==
+"@types/sharp@^0.22.0":
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/@types/sharp/-/sharp-0.22.0.tgz#d28f8a0cca4deaedaacb4e7101a30dfc54aa6087"
+  integrity sha512-aArqMOewA97tClqOaZPQhSqH8OZkhtwbmijAuxWOznrVma43UPQmNqzfBFmc+khIXwXefc7Sr77qv00MOcbKXA==
   dependencies:
     "@types/node" "*"
 
