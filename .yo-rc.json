@@ -1,0 +1,20 @@
+{
+  "generator-trigen-lib": {
+    "editPackage": true,
+    "pkg": {
+      "name": "@flexis/favicons",
+      "version": "1.1.2",
+      "description": "Best lib to generating favicons for modern web.",
+      "repository": "https://github.com/TrigenSoftware/flexis-favicons",
+      "author": "dangreen"
+    },
+    "type": "node",
+    "lang": "ts",
+    "rollup": true,
+    "jest": true,
+    "coverage": true,
+    "publishAsRoot": false,
+    "cleanPublish": true,
+    "checkSize": true
+  }
+}

@@ -1,34 +1,17 @@
 {
 	"testEnvironment": "node",
-	"moduleFileExtensions": [
-		"ts",
-		"tsx",
-		"js",
-		"jsx",
-		"json"
-	],
-	"testRegex": "/test/.*\\.spec\\.ts$",
+	"testRegex": "/test/.*\\.spec\\.(jsx?|tsx?)$",
 	"transform": {
-		"^.+\\.tsx?$": "ts-jest"
+		"^.+\\.(jsx?|tsx?)$": "babel-jest"
 	},
 	"collectCoverage": true,
 	"collectCoverageFrom": [
-		"src/**/*.{ts,tsx}",
+		"src/**/*.{js,jsx,ts,tsx}",
+		"!**/*.d.ts",
 		"!**/node_modules/**"
 	],
 	"coverageReporters": [
 		"lcovonly",
 		"text"
-	],
-	"globals": {
-		"ts-jest": {
-			"babelConfig": {
-				"presets": [
-					["babel-preset-trigen", {
-						"commonjs": true
-					}]
-				]
-			}
-		}
-	}
+	]
 }
