@@ -40,7 +40,7 @@ export default function plugin({
 	background,
 	verbose,
 	...options
-}: IPluginConfig) {
+}: IPluginConfig = {}) {
 
 	log(
 		verbose,
