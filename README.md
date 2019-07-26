@@ -44,7 +44,7 @@ export default FaviconsGenerator;
 export {
     IManifestConfig,
     IIconConfig,
-	IIconsConfig,
+    IIconsConfig,
     IHeadersConfig,
     IConfig,
     getHtmlHeadersMarkup
