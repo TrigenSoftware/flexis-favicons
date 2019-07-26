@@ -1,7 +1,11 @@
-import { join } from 'path';
+import {
+	join
+} from 'path';
 import Vinyl from 'vinyl';
 import Sharp from 'sharp';
-import { isIco } from './extensions';
+import {
+	isIco
+} from './extensions';
 
 /**
  * Attach image metadata to the vinyl file.

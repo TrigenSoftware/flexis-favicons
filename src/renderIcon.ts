@@ -1,10 +1,18 @@
-import { promisify } from 'util';
+import {
+	promisify
+} from 'util';
 import Vinyl from 'vinyl';
 import Sharp from 'sharp';
 import svg2imgCb from 'svg2img';
-import { ISize } from './icons';
-import { isSvg } from './extensions';
-import { attachMetadata } from './helpers';
+import {
+	ISize
+} from './icons';
+import {
+	isSvg
+} from './extensions';
+import {
+	attachMetadata
+} from './helpers';
 
 interface IRenderConfig {
 	rotate: boolean;
@@ -40,7 +48,9 @@ export default async function renderIcon(sources: Vinyl[], {
 	const sprite = await createSprite(sources, rotate, width, height, offsetPx);
 	const renderedSprite = await sprite.png().toBuffer();
 
-	canvas.overlayWith(renderedSprite);
+	canvas.composite([{
+		input: renderedSprite
+	}]);
 
 	return canvas.png().toBuffer();
 }

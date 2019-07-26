@@ -25,7 +25,9 @@
 		]
 	},
 	"include": [
-		"src/index.ts"
+		"src/index.ts",
+		"src/cli.ts",
+		"src/stream.ts"
 	],
 	"exclude": [
 		"lib/**/*"

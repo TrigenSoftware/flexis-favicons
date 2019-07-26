@@ -1,5 +1,9 @@
-import { applyPath } from './helpers';
-import { IManifestConfig } from './manifest';
+import {
+	applyPath
+} from './helpers';
+import {
+	IManifestConfig
+} from './manifest';
 import {
 	IIconToGenerateConfig,
 	iconsToGenerate

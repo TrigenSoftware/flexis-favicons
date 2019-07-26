@@ -28,20 +28,34 @@
     "coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
-    "favicon",
+    "generator",
     "ico",
-    "generator"
+    "favicon",
+    "icons",
+    "manifest",
+    "webmanifest",
+    "PWA",
+    "iOS",
+    "Android"
   ],
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "@types/node": "^12.0.7",
     "@types/sharp": "^0.22.2",
+    "@types/through2-concurrent": "^2.0.0",
     "@types/vinyl": "^2.0.3",
+    "@types/vinyl-fs": "^2.4.11",
+    "argue-cli": "^1.2.1",
+    "chalk": "^2.4.2",
     "core-js": "3",
+    "easy-table": "^1.1.1",
+    "rcfile": "^1.0.3",
     "sharp": "^0.22.1",
     "svg2img": "^0.6.0",
+    "through2-concurrent": "^2.0.0",
     "to-ico": "^1.1.5",
-    "vinyl": "^2.1.0"
+    "vinyl": "^2.1.0",
+    "vinyl-fs": "^3.0.3"
   },
   "devDependencies": {
     "@trigen/scripts": "2",
@@ -52,6 +66,8 @@
     "@trigen/scripts-plugin-size-limit": "2",
     "@trigen/scripts-plugin-typescript": "2",
     "@trigen/scripts-preset-lib": "2",
+    "rollup-plugin-add-shebang": "^0.3.1",
+    "rollup-plugin-commonjs": "9.3.4",
     "rollup-plugin-tslint": "^0.2.2",
     "rollup-plugin-typescript2": "^0.21.1"
   },

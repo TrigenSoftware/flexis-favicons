@@ -5,7 +5,9 @@ import {
 	isSupportedType,
 	isIco
 } from './extensions';
-import { IManifestConfig } from './manifest';
+import {
+	IManifestConfig
+} from './manifest';
 import {
 	IIconConfig,
 	IIconsConfig,
@@ -31,7 +33,14 @@ export {
 	default as getHtmlHeadersMarkup
 } from './getHtmlHeadersMarkup';
 
-interface IConfig {
+export {
+	IManifestConfig,
+	IIconConfig,
+	IIconsConfig,
+	IHeadersConfig
+};
+
+export interface IConfig {
 	path?: string;
 	manifest?: IManifestConfig;
 	icons?: IIconsConfig;

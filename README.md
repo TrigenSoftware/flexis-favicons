@@ -42,6 +42,11 @@ Module exposes next API:
 ```js
 export default FaviconsGenerator;
 export {
+    IManifestConfig,
+    IIconConfig,
+	IIconsConfig,
+    IHeadersConfig,
+    IConfig,
     getHtmlHeadersMarkup
 };
 ```
