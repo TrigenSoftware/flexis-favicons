@@ -85,9 +85,9 @@ interface IConfig {
 }
 ```
 
-- [`IIconsConfig`](#docs)
-- [`IManifestConfig`](#docs)
-- [`IHeadersConfig`](#docs)
+- [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html)
+- [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html)
+- [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html)
 
 #### Example
 
@@ -129,9 +129,9 @@ interface IPluginConfig {
 }
 ```
 
-- [`IIconsConfig`](#docs)
-- [`IManifestConfig`](#docs)
-- [`IHeadersConfig`](#docs)
+- [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html)
+- [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html)
+- [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html)
 
 ### JS API
 
