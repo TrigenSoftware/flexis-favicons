@@ -1,4 +1,6 @@
-import { IManifestConfig } from './manifest';
+import {
+	IManifestConfig
+} from './manifest';
 
 export interface IIconConfig {
 	offset?: number;
@@ -71,7 +73,7 @@ export function getCompleteIconConfig(
 	}
 
 	return {
-		offset: completeOffset,
+		offset:     completeOffset,
 		background: completeBackground
 	};
 }

@@ -1,4 +1,6 @@
-import { IHtmlHeader } from './htmlHeaders';
+import {
+	IHtmlHeader
+} from './htmlHeaders';
 
 const attributeNamesOrder = [
 	'name',
