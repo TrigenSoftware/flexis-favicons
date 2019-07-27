@@ -25,7 +25,7 @@
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
 [dependabot-url]: https://dependabot.com/
 
-Modern tool to generate icons for the modern web.
+A tool to generate icons for the modern web.
 
 - Can use it as [CLI](#cli) tool, [Gulp plugin](#gulp) or [JS library](#js-api) 🦄
 - Based on [Sharp](https://github.com/lovell/sharp) library - works fast 🚀
