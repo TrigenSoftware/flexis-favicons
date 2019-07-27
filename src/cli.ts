@@ -20,7 +20,7 @@ const {
 	path,
 	background,
 	manifest,
-	htmlHeaders,
+	headers,
 	dest,
 	skipFavicon,
 	skipAndroid,
@@ -35,7 +35,7 @@ const {
 }: any = readOptions([
 	['help', 'h'],
 	['verbose', 'v'],
-	['htmlHeaders', 'l']
+	['headers', 'H']
 ], [
 	{ 'path': 'p' },
 	{ 'background': 'b' },
@@ -59,8 +59,8 @@ if (help) {
 
 	const optionsTable = new Table();
 
-	optionsTable.cell('Option', 'input');
-	optionsTable.cell('Description', 'Input icon(s) glob patterns.');
+	optionsTable.cell('Option', 'sources');
+	optionsTable.cell('Description', 'Source icon(s) glob patterns.');
 	optionsTable.newRow();
 
 	optionsTable.cell('Option', '--help, -h');
@@ -84,16 +84,63 @@ if (help) {
 	optionsTable.cell('Description', 'Path to webmanifest file to add icons. Also can use it to get background color.');
 	optionsTable.newRow();
 
-	optionsTable.cell('Option', '--htmlHeaders, -h');
+	optionsTable.cell('Option', '--headers, -H');
 	optionsTable.cell('Description', 'Create html-file with headers for icons.');
 	optionsTable.cell('Default', 'false');
 	optionsTable.newRow();
 
-	optionsTable.cell('Option', '--dest, -d');
-	optionsTable.cell('Description', 'Destination directory,');
+	optionsTable.cell('Option', '--skipFavicon');
+	optionsTable.cell('Description', 'Do not create favicon.');
+	optionsTable.cell('Default', 'false');
 	optionsTable.newRow();
 
-	console.log(`\nfavicons [...input] [...options]\n\n${optionsTable.toString()}`);
+	optionsTable.cell('Option', '--skipAndroid');
+	optionsTable.cell('Description', 'Do not create icons for Android.');
+	optionsTable.cell('Default', 'false');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--skipApple');
+	optionsTable.cell('Description', 'Do not create icons for iOS.');
+	optionsTable.cell('Default', 'false');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--skipAppleStartup');
+	optionsTable.cell('Description', 'Do not create startup screens for iOS.');
+	optionsTable.cell('Default', 'false');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--androidBackground');
+	optionsTable.cell('Description', 'Background color for Android icons.');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--androidOffset');
+	optionsTable.cell('Description', 'Offset size in percents for Android icons.');
+	optionsTable.cell('Default', '0');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--appleBackground');
+	optionsTable.cell('Description', 'Background color for iOS icons.');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--appleOffset');
+	optionsTable.cell('Description', 'Offset size in percents for iOS icons.');
+	optionsTable.cell('Default', '0');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--appleStartupBackground');
+	optionsTable.cell('Description', 'Background color for iOS startup screens.');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--appleStartupOffset');
+	optionsTable.cell('Description', 'Offset size in percents for iOS startup screens.');
+	optionsTable.cell('Default', '0');
+	optionsTable.newRow();
+
+	optionsTable.cell('Option', '--dest, -d');
+	optionsTable.cell('Description', 'Destination directory.');
+	optionsTable.newRow();
+
+	console.log(`\nfavicons [...sources] [...options]\n\n${optionsTable.toString()}`);
 	process.exit(0);
 }
 
@@ -146,7 +193,7 @@ const params = {
 		: typeof rc.manifest === 'string'
 			? JSON.parse(readFileSync(rc.manifest, 'utf8'))
 			: rc.manifest,
-	headers:  htmlHeaders,
+	headers,
 	dest
 };
 

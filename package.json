@@ -1,7 +1,7 @@
 {
   "name": "@flexis/favicons",
   "version": "1.2.0",
-  "description": "Best lib to generating favicons for modern web.",
+  "description": "Modern tool to generate icons for the modern web.",
   "author": "dangreen",
   "license": "MIT",
   "repository": {
@@ -10,6 +10,9 @@
   },
   "bugs": {
     "url": "https://github.com/TrigenSoftware/flexis-favicons/issues"
+  },
+  "bin": {
+    "favicons": "lib/cli.js"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,7 +39,9 @@
     "webmanifest",
     "PWA",
     "iOS",
-    "Android"
+    "Android",
+    "gulp",
+    "gulpplugin"
   ],
   "dependencies": {
     "@babel/runtime": "^7.4.5",
