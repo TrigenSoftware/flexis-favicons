@@ -63,24 +63,226 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="-flexis-favicons">@flexis/favicons</h1>
-				<p><a href="https://www.npmjs.com/package/@flexis/favicons"><img src="https://img.shields.io/npm/v/%40flexis/favicons.svg" alt="NPM version"></a>
-					<a href="https://nodejs.org"><img src="https://img.shields.io/node/v/%40flexis/favicons.svg" alt="Node version"></a>
-					<a href="https://david-dm.org/TrigenSoftware/flexis-favicons"><img src="https://img.shields.io/david/TrigenSoftware/flexis-favicons.svg" alt="Dependency status"></a>
-					<a href="https://travis-ci.org/TrigenSoftware/flexis-favicons"><img src="http://img.shields.io/travis/TrigenSoftware/flexis-favicons.svg" alt="Build status"></a>
+				<p><a href="https://npmjs.com/package/@flexis/favicons"><img src="https://img.shields.io/npm/v/@flexis/favicons.svg" alt="NPM version"></a>
+					<a href="https://nodejs.org"><img src="https://img.shields.io/node/v/@flexis/favicons.svg" alt="Node version"></a>
+					<a href="https://david-dm.org/TrigenSoftware/flexis-favicons"><img src="https://david-dm.org/TrigenSoftware/flexis-favicons.svg" alt="Dependencies status"></a>
+					<a href="https://travis-ci.com/TrigenSoftware/flexis-favicons"><img src="http://img.shields.io/travis/com/TrigenSoftware/flexis-favicons.svg" alt="Build status"></a>
 					<a href="https://coveralls.io/r/TrigenSoftware/flexis-favicons"><img src="https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg" alt="Coverage status"></a>
-				<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/TrigenSoftware/flexis-favicons.svg" alt="Greenkeeper badge"></a></p>
-				<p>Best lib to generating favicons for modern web.</p>
+				<a href="https://dependabot.com/"><img src="https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons" alt="Dependabot badge"></a></p>
+				<p>A tool to generate icons for the modern web.</p>
+				<ul>
+					<li>Can use it as <a href="#cli">CLI</a> tool, <a href="#gulp">Gulp plugin</a> or <a href="#js-api">JS library</a> 🦄</li>
+					<li>Based on <a href="https://github.com/lovell/sharp">Sharp</a> library - works fast 🚀</li>
+					<li>Generates assets for modern things like <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a> 📲</li>
+				</ul>
 				<h2 id="install">Install</h2>
 				<pre><code class="language-bash">npm i -D @flexis/favicons
 <span class="hljs-comment"># or</span>
 yarn add -D @flexis/favicons</code></pre>
-				<h2 id="api">API</h2>
+				<h2 id="usage">Usage</h2>
+				<h3 id="cli">CLI</h3>
+				<pre><code class="language-bash">npx favicons [...sources] [...options]
+<span class="hljs-comment"># or</span>
+yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...options]</code></pre>
+				<table>
+					<thead>
+						<tr>
+							<th>Option</th>
+							<th>Description</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>sources</td>
+							<td>Source icon(s) glob patterns.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;help, -h</td>
+							<td>Print this message.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;verbose, -v</td>
+							<td>Print additional info about RegExps.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;path, -p</td>
+							<td>Relative public path to use in webmanifest and html-headers.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;background, -b</td>
+							<td>Background color for icons and startup images.</td>
+							<td>white</td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;manifest, -m</td>
+							<td>Path to webmanifest file to add icons. Also can use it to get background color.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;headers, -H</td>
+							<td>Create html-file with headers for icons.</td>
+							<td><code>false</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;skipFavicon</td>
+							<td>Do not create favicon.</td>
+							<td><code>false</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;skipAndroid</td>
+							<td>Do not create icons for Android.</td>
+							<td><code>false</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;skipApple</td>
+							<td>Do not create icons for iOS.</td>
+							<td><code>false</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;skipAppleStartup</td>
+							<td>Do not create startup screens for iOS.</td>
+							<td><code>false</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;androidBackground</td>
+							<td>Background color for Android icons.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;androidOffset</td>
+							<td>Offset size in percents for Android icons.</td>
+							<td><code>0</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;appleBackground</td>
+							<td>Background color for iOS icons.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;appleOffset</td>
+							<td>Offset size in percents for iOS icons.</td>
+							<td><code>0</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;appleStartupBackground</td>
+							<td>Background color for iOS startup screens.</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;appleStartupOffset</td>
+							<td>Offset size in percents for iOS startup screens.</td>
+							<td><code>0</code></td>
+						</tr>
+						<tr>
+							<td>&#x2011;&#x2011;dest, -d</td>
+							<td>Destination directory.</td>
+							<td></td>
+						</tr>
+				</tbody></table>
+				<p>Also you can create <code>.faviconsrc</code> file:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">interface</span> IConfig {
+    src?: <span class="hljs-built_in">string</span>|<span class="hljs-built_in">string</span>[];
+    path?: <span class="hljs-built_in">string</span>;
+    verbose?: <span class="hljs-built_in">boolean</span>;
+    background?: <span class="hljs-built_in">string</span>;
+    icons?: IIconsConfig;
+    manifest?: <span class="hljs-built_in">string</span>|IManifestConfig; <span class="hljs-comment">// path to source manifset or manifest object</span>
+    headers?: <span class="hljs-built_in">boolean</span>|IHeadersConfig;
+    dest?: <span class="hljs-built_in">string</span>;
+}</code></pre>
+				<ul>
+					<li><a href="#docs"><code>IIconsConfig</code></a></li>
+					<li><a href="#docs"><code>IManifestConfig</code></a></li>
+					<li><a href="#docs"><code>IHeadersConfig</code></a></li>
+				</ul>
+				<h4 id="example">Example</h4>
+				<pre><code class="language-bash"><span class="hljs-comment"># From SVG</span>
+favicons src/favicon.svg --manifest src/manifest.json --headers -d build
+<span class="hljs-comment"># From some PNGs with different sizes</span>
+favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span class="hljs-string">"#FACE8D"</span> --headers -d build</code></pre>
+				<h3 id="gulp">Gulp</h3>
+				<p>Also you can use <code>@flexis/favicons</code> with <a href="https://github.com/gulpjs/gulp">Gulp</a>:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> favicons <span class="hljs-keyword">from</span> <span class="hljs-string">'@flexis/favicons/stream'</span>;
+<span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/manifest.json'</span>;
+
+gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
+    gulp.src(<span class="hljs-string">'src/favicon.svg'</span>)
+        .pipe(favicons({
+            manifest,
+            <span class="hljs-attr">headers</span>: <span class="hljs-literal">true</span>
+        }))
+        .pipe(gulp.dest(<span class="hljs-string">'build'</span>))
+);</code></pre>
+				<p>Plugin options:</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">interface</span> IPluginConfig {
+    path?: <span class="hljs-built_in">string</span>;
+    verbose?: <span class="hljs-built_in">boolean</span>;
+    background?: <span class="hljs-built_in">string</span>;
+    icons?: IIconsConfig;
+    manifest?: IManifestConfig; <span class="hljs-comment">// path or manifest object</span>
+    headers?: <span class="hljs-built_in">boolean</span>|IHeadersConfig;
+}</code></pre>
+				<ul>
+					<li><a href="#docs"><code>IIconsConfig</code></a></li>
+					<li><a href="#docs"><code>IManifestConfig</code></a></li>
+					<li><a href="#docs"><code>IHeadersConfig</code></a></li>
+				</ul>
+				<h3 id="js-api">JS API</h3>
 				<p>Module exposes next API:</p>
 				<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> FaviconsGenerator;
 <span class="hljs-keyword">export</span> {
+    IManifestConfig,
+    IIconConfig,
+    IIconsConfig,
+    IHeadersConfig,
+    IConfig,
     getHtmlHeadersMarkup
 };</code></pre>
 				<p><a href="https://trigensoftware.github.io/flexis-favicons/index.html">Description of this methods you can find in Documentation.</a></p>
+				<h4 id="example">Example</h4>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {
+    promises <span class="hljs-keyword">as</span> fs
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'fs'</span>;
+<span class="hljs-keyword">import</span> FaviconsGenerator, {
+    getHtmlHeadersMarkup
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@flexis/favicons'</span>;
+<span class="hljs-keyword">import</span> Vinyl <span class="hljs-keyword">from</span> <span class="hljs-string">'vinyl'</span>;
+<span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/manifest.json'</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generate</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">const</span> path = <span class="hljs-string">'src/favicon.svg'</span>;
+    <span class="hljs-keyword">const</span> contents = <span class="hljs-keyword">await</span> fs.readFile(path);
+    <span class="hljs-keyword">const</span> source = <span class="hljs-keyword">new</span> Vinyl({
+        path,
+        contents
+    });
+    <span class="hljs-keyword">const</span> favicons = <span class="hljs-keyword">new</span> FaviconsGenerator({
+        manifest
+    });
+    <span class="hljs-keyword">const</span> icons = favicons.generateIcons(source);
+
+    <span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> icon <span class="hljs-keyword">of</span> icons) {
+        icon.base = <span class="hljs-string">'./build'</span>;
+        <span class="hljs-keyword">await</span> fs.writeFile(icon.path, icon.contents);
+    }
+
+    <span class="hljs-keyword">const</span> headers = favicons.generateHtmlHeaders();
+    <span class="hljs-keyword">const</span> html = getHtmlHeadersMarkup(headers);
+
+    <span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">'build/favicons.html'</span>, html);
+
+    <span class="hljs-keyword">const</span> manifest = favicons.generateManifset();
+    <span class="hljs-keyword">const</span> json = <span class="hljs-built_in">JSON</span>.stringify(manifest);
+
+    <span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">'build/manifest.json'</span>, json);
+}
+
+generate();</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -88,6 +290,9 @@ yarn add -D @flexis/favicons</code></pre>
 				<ul>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_cli_.html">"cli"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_defaults_.html">"defaults"</a>
@@ -115,6 +320,9 @@ yarn add -D @flexis/favicons</code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_rendericon_.html">"render<wbr>Icon"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_stream_.html">"stream"</a>
 					</li>
 				</ul>
 			</nav>

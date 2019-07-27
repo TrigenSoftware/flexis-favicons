@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;extensions&quot; | @flexis/favicons</title>
+	<title>&quot;stream&quot; | @flexis/favicons</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_extensions_.html">&quot;extensions&quot;</a>
+					<a href="_stream_.html">&quot;stream&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;extensions&quot;</h1>
+			<h1>External module &quot;stream&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -68,18 +68,24 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_extensions_.html#isico" class="tsd-kind-icon">is<wbr>Ico</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_extensions_.html#issupportedtype" class="tsd-kind-icon">is<wbr>Supported<wbr>Type</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_extensions_.html#issvg" class="tsd-kind-icon">is<wbr>Svg</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported"><a href="../interfaces/_stream_.ipluginconfig.html" class="tsd-kind-icon">IPlugin<wbr>Config</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_stream_.html#log" class="tsd-kind-icon">log</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_stream_.html#plugin" class="tsd-kind-icon">plugin</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_stream_.html#tovinyl" class="tsd-kind-icon">to<wbr>Vinyl</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_extensions_.html#extensions" class="tsd-kind-icon">extensions</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_stream_.html#throughoptions" class="tsd-kind-icon">through<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
@@ -87,131 +93,111 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="isico" class="tsd-anchor"></a>
-					<h3>is<wbr>Ico</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Ico<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="log" class="tsd-anchor"></a>
+					<h3>log</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">(</span>verbose<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, <span class="tsd-signature-symbol">...</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/extensions.ts#L22">extensions.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/stream.ts#L31">stream.ts:31</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check is &quot;ico&quot; or not.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>filename: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>File name to check.</p>
-									</div>
+									<h5>verbose: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>message: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>Result of checking.</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="issupportedtype" class="tsd-anchor"></a>
-					<h3>is<wbr>Supported<wbr>Type</h3>
+					<a name="plugin" class="tsd-anchor"></a>
+					<h3>plugin</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Supported<wbr>Type<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">plugin<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Transform</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/extensions.ts#L13">extensions.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/stream.ts#L38">stream.ts:38</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check image type</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Image extension without dot.</p>
-									</div>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> __namedParameters: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>background<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_htmlheaders_.iheadersconfig.html" class="tsd-signature-type">IHeadersConfig</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>options<span class="tsd-signature-symbol">: </span><a href="" class="tsd-signature-type">options</a></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>verbose<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>Image type is supported or not.</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Transform</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="issvg" class="tsd-anchor"></a>
-					<h3>is<wbr>Svg</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Svg<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="tovinyl" class="tsd-anchor"></a>
+					<h3>to<wbr>Vinyl</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Vinyl<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vinyl</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/extensions.ts#L31">extensions.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/stream.ts#L23">stream.ts:23</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check is &quot;svg&quot; or not.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>filename: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>File name to check.</p>
-									</div>
+									<h5>source: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-							<p>Result of checking.</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Vinyl</span></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
-					<a name="extensions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> extensions</h3>
-					<div class="tsd-signature tsd-kind-icon">extensions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="throughoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> through<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">through<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/extensions.ts#L3">extensions.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/stream.ts#L19">stream.ts:19</a></li>
 						</ul>
 					</aside>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="extensions.png" class="tsd-anchor"></a>
-						<h3>png</h3>
-						<div class="tsd-signature tsd-kind-icon">png<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^png$/</span></div>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="throughoptions.maxconcurrency" class="tsd-anchor"></a>
+						<h3>max<wbr>Concurrency</h3>
+						<div class="tsd-signature tsd-kind-icon">max<wbr>Concurrency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;cpus().length</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/extensions.ts#L4">extensions.ts:4</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="extensions.svg" class="tsd-anchor"></a>
-						<h3>svg</h3>
-						<div class="tsd-signature tsd-kind-icon">svg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^svg$/</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/extensions.ts#L5">extensions.ts:5</a></li>
+								<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/21409ee/src/stream.ts#L20">stream.ts:20</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -230,7 +216,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_defaults_.html">"defaults"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_extensions_.html">"extensions"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -254,24 +240,27 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_rendericon_.html">"render<wbr>Icon"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_stream_.html">"stream"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_extensions_.html#isico" class="tsd-kind-icon">is<wbr>Ico</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../interfaces/_stream_.ipluginconfig.html" class="tsd-kind-icon">IPlugin<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_stream_.html#log" class="tsd-kind-icon">log</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_extensions_.html#issupportedtype" class="tsd-kind-icon">is<wbr>Supported<wbr>Type</a>
+						<a href="_stream_.html#plugin" class="tsd-kind-icon">plugin</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_extensions_.html#issvg" class="tsd-kind-icon">is<wbr>Svg</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_stream_.html#tovinyl" class="tsd-kind-icon">to<wbr>Vinyl</a>
 					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="_extensions_.html#extensions" class="tsd-kind-icon">extensions</a>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_stream_.html#throughoptions" class="tsd-kind-icon">through<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
