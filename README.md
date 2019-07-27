@@ -124,7 +124,7 @@ interface IPluginConfig {
 	verbose?: boolean;
 	background?: string;
 	icons?: IIconsConfig;
-	manifest?: IManifestConfig; // path or manifest object
+	manifest?: IManifestConfig;
 	headers?: boolean|IHeadersConfig;
 }
 ```
