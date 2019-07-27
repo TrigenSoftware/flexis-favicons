@@ -5,7 +5,7 @@
 [![Dependencies status][deps]][deps-url]
 [![Build status][build]][build-url]
 [![Coverage status][coverage]][coverage-url]
-[![Greenkeeper badge][greenkeeper]][greenkeeper-url]
+[![Dependabot badge][dependabot]][dependabot-url]
 
 [npm]: https://img.shields.io/npm/v/@flexis/favicons.svg
 [npm-url]: https://npmjs.com/package/@flexis/favicons
@@ -22,8 +22,8 @@
 [coverage]: https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg
 [coverage-url]: https://coveralls.io/r/TrigenSoftware/flexis-favicons
 
-[greenkeeper]: https://badges.greenkeeper.io/TrigenSoftware/flexis-favicons.svg
-[greenkeeper-url]: https://greenkeeper.io/
+[dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
+[dependabot-url]: https://dependabot.com/
 
 Modern tool to generate icons for the modern web.
 
