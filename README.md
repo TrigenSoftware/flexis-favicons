@@ -27,6 +27,10 @@
 
 Modern tool to generate icons for the modern web.
 
+- Can use it as [CLI](#cli) tool, [Gulp-plugin](#gulp) or [JS library](#js-api);
+- Based on [Sharp](https://github.com/lovell/sharp) library - works fast;
+- Generates assets for modern things like [PWA](https://developers.google.com/web/progressive-web-apps/)
+
 ## Install
 
 ```bash
@@ -35,7 +39,7 @@ npm i -D @flexis/favicons
 yarn add -D @flexis/favicons
 ```
 
-## API
+## Usage
 
 ### CLI
 
@@ -62,11 +66,11 @@ yarn exec -- favicons [...sources] [...options]
 | &#x2011;&#x2011;androidOffset | Offset size in percents for Android icons. | `0` |
 | &#x2011;&#x2011;appleBackground | Background color for iOS icons. |  |
 | &#x2011;&#x2011;appleOffset | Offset size in percents for iOS icons. | `0` |
-| &#x2011;&#x2011;appleStartupBackground  Background color for iOS startup screens. |  |
+| &#x2011;&#x2011;appleStartupBackground | Background color for iOS startup screens. |  |
 | &#x2011;&#x2011;appleStartupOffset | Offset size in percents for iOS startup screens. | `0` |
 | &#x2011;&#x2011;dest, -d | Destination directory. | |
 
-Also you can create `.faviconsrc`:
+Also you can create `.faviconsrc` file:
 
 ```ts
 interface IConfig {
@@ -75,7 +79,7 @@ interface IConfig {
 	verbose?: boolean;
 	background?: string;
 	icons?: IIconsConfig;
-	manifest?: string|IManifestConfig; // path or manifest object
+	manifest?: string|IManifestConfig; // path to source manifset or manifest object
 	headers?: boolean|IHeadersConfig;
 	dest?: string;
 }
@@ -96,11 +100,11 @@ favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
 
 ### Gulp
 
-Also you can use `@flexis/favicons` with Gulp:
+Also you can use `@flexis/favicons` with [Gulp](https://github.com/gulpjs/gulp):
 
 ```js
 import favicons from '@flexis/favicons/stream';
-import manifest from 'src/manifest.json';
+import manifest from './src/manifest.json';
 
 gulp.task('favicons', () =>
     gulp.src('src/favicon.svg')
@@ -157,7 +161,7 @@ import FaviconsGenerator, {
     getHtmlHeadersMarkup
 } from '@flexis/favicons';
 import Vinyl from 'vinyl';
-import manifest from 'src/manifest.json';
+import manifest from './src/manifest.json';
 
 async function generate() {
 
