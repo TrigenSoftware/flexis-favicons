@@ -25,15 +25,19 @@
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
 [dependabot-url]: https://dependabot.com/
 
-A tool to generate icons for the modern web.
+Flexis favicons is a tool for generating icons for the modern web.
 
-- Can use it as [CLI](#cli) tool, [Gulp plugin](#gulp) or [JS library](#js-api) 🦄
-- Based on [Sharp](https://github.com/lovell/sharp) library - works fast 🚀
-- Generates assets for modern things like [PWA](https://developers.google.com/web/progressive-web-apps/) 📲
+- Traditional web favicons 🕸️
+- Android and iOS Favicons, iOS tartup screens 📱 
+- Generates assets for [PWA](https://developers.google.com/web/progressive-web-apps/) 📲
+- You cand run it from the [CLI](#cli) 🖳
+- Works with [Gulp](#gulp) and as [JS library](#js-api) 🦄
+- Based on [Sharp](https://github.com/lovell/sharp) library - lightning fast ⚡
+
 
 ## Install
 
-```bash
+```sh
 npm i -D @flexis/favicons
 # or
 yarn add -D @flexis/favicons
@@ -43,7 +47,7 @@ yarn add -D @flexis/favicons
 
 ### CLI
 
-```bash
+```sh
 npx favicons [...sources] [...options]
 # or
 yarn exec -- favicons [...sources] [...options]
@@ -70,7 +74,19 @@ yarn exec -- favicons [...sources] [...options]
 | &#x2011;&#x2011;appleStartupOffset | Offset size in percents for iOS startup screens. | `0` |
 | &#x2011;&#x2011;dest, -d | Destination directory. | |
 
-Also you can create `.faviconsrc` file:
+#### Example
+
+```sh
+# From SVG
+favicons src/favicon.svg --manifest src/manifest.json --headers -d build
+# From some PNGs with different sizes
+favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
+```
+
+### Configuration
+A config file is a JSON file called `.faviconsrc`
+
+Supported options:
 
 ```ts
 interface IConfig {
@@ -88,15 +104,6 @@ interface IConfig {
 - [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html)
 - [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html)
 - [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html)
-
-#### Example
-
-```bash
-# From SVG
-favicons src/favicon.svg --manifest src/manifest.json --headers -d build
-# From some PNGs with different sizes
-favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
-```
 
 ### Gulp
 
