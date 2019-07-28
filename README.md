@@ -6,6 +6,7 @@
 [![Build status][build]][build-url]
 [![Coverage status][coverage]][coverage-url]
 [![Dependabot badge][dependabot]][dependabot-url]
+[![Documentation badge][documentation]][documentation-url]
 
 [npm]: https://img.shields.io/npm/v/@flexis/favicons.svg
 [npm-url]: https://npmjs.com/package/@flexis/favicons
@@ -16,7 +17,7 @@
 [deps]: https://david-dm.org/TrigenSoftware/flexis-favicons.svg
 [deps-url]: https://david-dm.org/TrigenSoftware/flexis-favicons
 
-[build]: http://img.shields.io/travis/com/TrigenSoftware/flexis-favicons.svg
+[build]: https://img.shields.io/travis/com/TrigenSoftware/flexis-favicons.svg
 [build-url]: https://travis-ci.com/TrigenSoftware/flexis-favicons
 
 [coverage]: https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg
@@ -25,15 +26,21 @@
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
 [dependabot-url]: https://dependabot.com/
 
-A tool to generate icons for the modern web.
+[documentation]: https://img.shields.io/badge/API-Documentation-2b7489.svg
+[documentation-url]: https://trigensoftware.github.io/flexis-favicons
 
-- Can use it as [CLI](#cli) tool, [Gulp plugin](#gulp) or [JS library](#js-api) 🦄
-- Based on [Sharp](https://github.com/lovell/sharp) library - works fast 🚀
-- Generates assets for modern things like [PWA](https://developers.google.com/web/progressive-web-apps/) 📲
+A tool for generating icons for the modern web.
+
+- Traditional web favicons ❤️
+- Android and iOS icons, iOS startup screens 🖼
+- Generates assets for [PWA](https://developers.google.com/web/progressive-web-apps/) 📲
+- You cand run it from the [CLI](#cli) ⌨️
+- Works with [Gulp](#gulp) and as [JS library](#js-api) 🦄
+- Based on [Sharp](https://github.com/lovell/sharp) library - lightning fast ⚡️
 
 ## Install
 
-```bash
+```sh
 npm i -D @flexis/favicons
 # or
 yarn add -D @flexis/favicons
@@ -43,7 +50,7 @@ yarn add -D @flexis/favicons
 
 ### CLI
 
-```bash
+```sh
 npx favicons [...sources] [...options]
 # or
 yarn exec -- favicons [...sources] [...options]
@@ -70,7 +77,20 @@ yarn exec -- favicons [...sources] [...options]
 | &#x2011;&#x2011;appleStartupOffset | Offset size in percents for iOS startup screens. | `0` |
 | &#x2011;&#x2011;dest, -d | Destination directory. | |
 
-Also you can create `.faviconsrc` file:
+#### Example
+
+```sh
+# From SVG
+favicons src/favicon.svg --manifest src/manifest.json --headers -d build
+# From some PNGs with different sizes
+favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
+```
+
+#### Configuration
+
+Configuration file is optional. If needed, can be defined through `.faviconsrc` JSON file in the root directory of the project.
+
+Supported options:
 
 ```ts
 interface IConfig {
@@ -88,15 +108,6 @@ interface IConfig {
 - [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html)
 - [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html)
 - [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html)
-
-#### Example
-
-```bash
-# From SVG
-favicons src/favicon.svg --manifest src/manifest.json --headers -d build
-# From some PNGs with different sizes
-favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
-```
 
 ### Gulp
 
