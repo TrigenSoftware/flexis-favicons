@@ -6,6 +6,7 @@
 [![Build status][build]][build-url]
 [![Coverage status][coverage]][coverage-url]
 [![Dependabot badge][dependabot]][dependabot-url]
+[![Documentation badge][documentation]][documentation-url]
 
 [npm]: https://img.shields.io/npm/v/@flexis/favicons.svg
 [npm-url]: https://npmjs.com/package/@flexis/favicons
@@ -24,6 +25,9 @@
 
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
 [dependabot-url]: https://dependabot.com/
+
+[documentation]: https://img.shields.io/badge/API-Documentation-2b7489.svg
+[documentation-url]: https://trigensoftware.github.io/flexis-favicons
 
 A tool for generating icons for the modern web.
 
