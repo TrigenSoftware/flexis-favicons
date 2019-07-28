@@ -74,14 +74,14 @@ Also you can create `.faviconsrc` file:
 
 ```ts
 interface IConfig {
-	src?: string|string[];
-	path?: string;
-	verbose?: boolean;
-	background?: string;
-	icons?: IIconsConfig;
-	manifest?: string|IManifestConfig; // path to source manifset or manifest object
-	headers?: boolean|IHeadersConfig;
-	dest?: string;
+    src?: string|string[];
+    path?: string;
+    verbose?: boolean;
+    background?: string;
+    icons?: IIconsConfig;
+    manifest?: string|IManifestConfig; // path to source manifset or manifest object
+    headers?: boolean|IHeadersConfig;
+    dest?: string;
 }
 ```
 
@@ -120,12 +120,12 @@ Plugin options:
 
 ```ts
 interface IPluginConfig {
-	path?: string;
-	verbose?: boolean;
-	background?: string;
-	icons?: IIconsConfig;
-	manifest?: IManifestConfig;
-	headers?: boolean|IHeadersConfig;
+    path?: string;
+    verbose?: boolean;
+    background?: string;
+    icons?: IIconsConfig;
+    manifest?: IManifestConfig;
+    headers?: boolean|IHeadersConfig;
 }
 ```
 
