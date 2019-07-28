@@ -16,7 +16,7 @@
 [deps]: https://david-dm.org/TrigenSoftware/flexis-favicons.svg
 [deps-url]: https://david-dm.org/TrigenSoftware/flexis-favicons
 
-[build]: http://img.shields.io/travis/com/TrigenSoftware/flexis-favicons.svg
+[build]: https://img.shields.io/travis/com/TrigenSoftware/flexis-favicons.svg
 [build-url]: https://travis-ci.com/TrigenSoftware/flexis-favicons
 
 [coverage]: https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg
