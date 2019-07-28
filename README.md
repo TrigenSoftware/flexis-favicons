@@ -25,15 +25,14 @@
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
 [dependabot-url]: https://dependabot.com/
 
-Flexis favicons is a tool for generating icons for the modern web.
+`@flexis/favicons` is a tool for generating icons for the modern web.
 
-- Traditional web favicons 🕸️
+- Traditional web favicons ❤️
 - Android and iOS Favicons, iOS tartup screens 📱 
 - Generates assets for [PWA](https://developers.google.com/web/progressive-web-apps/) 📲
-- You cand run it from the [CLI](#cli) 🖳
+- You cand run it from the [CLI](#cli) ⌨️
 - Works with [Gulp](#gulp) and as [JS library](#js-api) 🦄
-- Based on [Sharp](https://github.com/lovell/sharp) library - lightning fast ⚡
-
+- Based on [Sharp](https://github.com/lovell/sharp) library - lightning fast ⚡️
 
 ## Install
 
@@ -83,8 +82,11 @@ favicons src/favicon.svg --manifest src/manifest.json --headers -d build
 favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
 ```
 
-### Configuration
-A config file is a JSON file called `.faviconsrc`
+#### Configuration
+
+Configuration file is optional. 
+
+A config file is a JSON file called `.faviconsrc` and located in the root directory of the project.
 
 Supported options:
 
