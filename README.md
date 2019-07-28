@@ -84,9 +84,7 @@ favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
 
 #### Configuration
 
-Configuration file is optional. 
-
-A config file is a JSON file called `.faviconsrc` and located in the root directory of the project.
+Although optional, configuration can be defined through `.faviconsrc` JSON file in the root directory of the project
 
 Supported options:
 
