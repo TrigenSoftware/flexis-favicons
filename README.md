@@ -84,7 +84,7 @@ favicons "src/icons/*.png" --background "#FACE8D" --headers -d build
 
 #### Configuration
 
-Although optional, configuration can be defined through `.faviconsrc` JSON file in the root directory of the project
+Configuration file is optional. If needed, can be defined through `.faviconsrc` JSON file in the root directory of the project.
 
 Supported options:
 
