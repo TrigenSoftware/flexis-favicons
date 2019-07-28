@@ -28,7 +28,7 @@
 `@flexis/favicons` is a tool for generating icons for the modern web.
 
 - Traditional web favicons ❤️
-- Android and iOS Favicons, iOS tartup screens 📱 
+- Android and iOS Favicons, iOS startup screens 🖼
 - Generates assets for [PWA](https://developers.google.com/web/progressive-web-apps/) 📲
 - You cand run it from the [CLI](#cli) ⌨️
 - Works with [Gulp](#gulp) and as [JS library](#js-api) 🦄
