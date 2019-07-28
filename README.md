@@ -25,7 +25,7 @@
 [dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons
 [dependabot-url]: https://dependabot.com/
 
-`@flexis/favicons` is a tool for generating icons for the modern web.
+A tool for generating icons for the modern web.
 
 - Traditional web favicons ❤️
 - Android and iOS icons, iOS startup screens 🖼

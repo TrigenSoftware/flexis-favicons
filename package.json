@@ -1,7 +1,7 @@
 {
   "name": "@flexis/favicons",
   "version": "1.2.0",
-  "description": "A tool to generate icons for the modern web.",
+  "description": "A tool for generating icons for the modern web.",
   "author": "dangreen",
   "license": "MIT",
   "repository": {
