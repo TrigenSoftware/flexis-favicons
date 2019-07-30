@@ -24,6 +24,10 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [1.3.1] - 2019-07-30
+### Fixed
+- Icons rendering.
+
 ## [1.3.0] - 2019-07-30
 ### Added
 - CLI tool;
