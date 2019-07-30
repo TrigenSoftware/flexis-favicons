@@ -206,6 +206,4 @@ async function generate() {
 generate();
 ```
 
----
-
-[![Browserstack](https://www.browserstack.com/images/layout/browserstack-logo-600x315.png)](https://www.browserstack.com)
+[<img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" width="300">](https://www.browserstack.com)
