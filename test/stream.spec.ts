@@ -26,7 +26,7 @@ describe('stream', () => {
 				counter++;
 			})
 			.on('end', () => {
-				expect(counter).toBe(34);
+				expect(counter).toBe(37);
 				done();
 			});
 	});

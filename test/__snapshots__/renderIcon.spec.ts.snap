@@ -8,10 +8,10 @@ exports[`renderIcon should render correct icon from png 1`] = `"74cab8efa35abcb9
 
 exports[`renderIcon should render correct icon from svg 1`] = `"76026a4d85751a41a803bc988c188a315b063fe2"`;
 
-exports[`renderIcon should render correct rotated icon from png 1`] = `"5170d2651f493fab72a991d5e3ce696a481b6c2e"`;
+exports[`renderIcon should render correct rotated icon from png 1`] = `"5969a63e0deee15253582c4b9b90778f0f667d8e"`;
 
-exports[`renderIcon should render correct rotated icon from svg 1`] = `"d049a0e4d467e5fec106b5410bd5cf44d35bd910"`;
+exports[`renderIcon should render correct rotated icon from svg 1`] = `"8ba13a98231c7d00e969682383351b826a69dc8b"`;
 
-exports[`renderIcon should render correct rotated non-square icon from png 1`] = `"2e20c257130fa799507a419a4d17e9910253da5d"`;
+exports[`renderIcon should render correct rotated non-square icon from png 1`] = `"b923c1bc735ed26b20b8b30382bfa58479da22d7"`;
 
-exports[`renderIcon should render correct rotated non-square icon from svg 1`] = `"343608a2f60f96e22f069b0f707153e2eedc17f5"`;
+exports[`renderIcon should render correct rotated non-square icon from svg 1`] = `"7f6b692d6228dd85e8a63bb3ec3e762820477fe8"`;

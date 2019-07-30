@@ -15,7 +15,6 @@ import {
 } from './helpers';
 
 interface IRenderConfig {
-	rotate: boolean;
 	width: number;
 	height: number;
 	background: string;
@@ -24,7 +23,6 @@ interface IRenderConfig {
 
 const PERCENTS_100 = 100;
 const TWICE = 2;
-const ROTATE_DEGREES = 90;
 
 const svg2img = promisify(svg2imgCb);
 
@@ -35,7 +33,6 @@ const svg2img = promisify(svg2imgCb);
  * @return Rendered icon.
  */
 export default async function renderIcon(sources: Vinyl[], {
-	rotate,
 	width,
 	height,
 	background,
@@ -45,7 +42,7 @@ export default async function renderIcon(sources: Vinyl[], {
 	const maximumSide = Math.max(width, height);
 	const offsetPx = Math.round(maximumSide / PERCENTS_100 * offset) || 0;
 	const canvas = await createCanvas(width, height, background);
-	const sprite = await createSprite(sources, rotate, width, height, offsetPx);
+	const sprite = await createSprite(sources, width, height, offsetPx);
 	const renderedSprite = await sprite.png().toBuffer();
 
 	canvas.composite([{
@@ -88,7 +85,6 @@ function createCanvas(
  */
 async function createSprite(
 	sources: Vinyl[],
-	rotate: boolean,
 	width: number,
 	height: number,
 	offset: number
@@ -98,10 +94,6 @@ async function createSprite(
 	const spriteHeight = height - offset * TWICE;
 	const source = await getSuitableSourceBuffer(sources, spriteWidth, spriteHeight);
 	const sprite = Sharp(source);
-
-	if (rotate) {
-		sprite.rotate(ROTATE_DEGREES);
-	}
 
 	sprite.resize(spriteWidth, spriteHeight, {
 		fit: 'inside'

@@ -105,7 +105,7 @@ export default function plugin({
 				this.push(
 					new Vinyl({
 						contents: Buffer.from(`${getHtmlHeadersMarkup(htmlHeaders)}\n`),
-						path: 'favicons.html'
+						path:    'favicons.html'
 					})
 				);
 				log(
@@ -121,7 +121,7 @@ export default function plugin({
 				this.push(
 					new Vinyl({
 						contents: Buffer.from(`${JSON.stringify(manifest, null, '  ')}\n`),
-						path: 'manifest.json'
+						path:     'manifest.json'
 					})
 				);
 				log(

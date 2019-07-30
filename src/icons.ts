@@ -234,13 +234,12 @@ export const iconsToGenerate: IIconsToGenerate = {
 			pixelRatio: 3,
 			rotate: false
 		},
-		// Can't rotate due to cutout.
-		// 'apple-touch-startup-image-2436x1125.png': {
-		// 	width: 2436,
-		// 	height: 1125,
-		// 	pixelRatio: 3,
-		// 	rotate: true
-		// },
+		'apple-touch-startup-image-2436x1125.png': {
+			width: 2436,
+			height: 1125,
+			pixelRatio: 3,
+			rotate: true
+		},
 		// iPhone Xr
 		'apple-touch-startup-image-828x1792.png': {
 			width: 828,
@@ -248,13 +247,12 @@ export const iconsToGenerate: IIconsToGenerate = {
 			pixelRatio: 2,
 			rotate: false
 		},
-		// Can't rotate due to cutout.
-		// 'apple-touch-startup-image-1792x828.png': {
-		// 	width: 1792,
-		// 	height: 828,
-		// 	pixelRatio: 2,
-		// 	rotate: true
-		// },
+		'apple-touch-startup-image-1792x828.png': {
+			width: 1792,
+			height: 828,
+			pixelRatio: 2,
+			rotate: true
+		},
 		// iPhone Xs Max
 		'apple-touch-startup-image-1242x2688.png': {
 			width: 1242,
@@ -262,13 +260,12 @@ export const iconsToGenerate: IIconsToGenerate = {
 			pixelRatio: 3,
 			rotate: false
 		},
-		// Can't rotate due to cutout.
-		// 'apple-touch-startup-image-2688x1242.png': {
-		// 	width: 2688,
-		// 	height: 1242,
-		// 	pixelRatio: 3,
-		// 	rotate: true
-		// },
+		'apple-touch-startup-image-2688x1242.png': {
+			width: 2688,
+			height: 1242,
+			pixelRatio: 3,
+			rotate: true
+		},
 		// iPad Mini, Air
 		'apple-touch-startup-image-1536x2048.png': {
 			width: 1536,

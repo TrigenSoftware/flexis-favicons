@@ -224,12 +224,10 @@ export default class FaviconsGenerator {
 			background
 		} = iconConfig;
 		const {
-			rotate,
 			width,
 			height
 		} = iconToGenerateConfig;
 		const icon = await renderIcon(sources, {
-			rotate,
 			width,
 			height,
 			background: background as string,

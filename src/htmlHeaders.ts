@@ -174,8 +174,10 @@ function getAppleStartupMediaQuery(
 	const pixelRatio = typeof maybePixelRatio === 'number'
 		? maybePixelRatio
 		: 1;
-	const deviceWidth = width / pixelRatio;
-	const deviceHeight = height / pixelRatio;
+	const screenWidth = width / pixelRatio;
+	const screenHeight = height / pixelRatio;
+	const deviceWidth = rotate ? screenHeight : screenWidth;
+	const deviceHeight = rotate ? screenWidth : screenHeight;
 	let query = `(device-width: ${deviceWidth}px) and (device-height: ${deviceHeight}px)`;
 
 	if (typeof rotate === 'boolean') {

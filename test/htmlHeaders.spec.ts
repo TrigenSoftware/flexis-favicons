@@ -114,7 +114,7 @@ describe('htmlHeaders', () => {
 
 			const headers = appleStartupHeaders({});
 
-			expect(headers.length).toBe(15);
+			expect(headers.length).toBe(18);
 		});
 
 		it('should apply path', () => {
