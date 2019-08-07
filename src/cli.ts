@@ -9,6 +9,7 @@ import {
 import Table from 'easy-table';
 import vfs from 'vinyl-fs';
 import getRc from 'rcfile';
+import omit from 'omit-empty';
 import stream from './stream';
 import {
 	IIconConfig
@@ -183,18 +184,22 @@ const icons = {
 };
 const params = {
 	...rc,
-	src:      argv,
-	path,
-	verbose,
-	background,
-	icons,
-	manifest: manifest
-		? JSON.parse(readFileSync(manifest, 'utf8'))
-		: typeof rc.manifest === 'string'
-			? JSON.parse(readFileSync(rc.manifest, 'utf8'))
-			: rc.manifest,
-	headers,
-	dest
+	...omit({
+		src:      argv.length
+			? argv
+			: rc.src,
+		path,
+		verbose,
+		background,
+		icons,
+		manifest: manifest
+			? JSON.parse(readFileSync(manifest, 'utf8'))
+			: typeof rc.manifest === 'string'
+				? JSON.parse(readFileSync(rc.manifest, 'utf8'))
+				: rc.manifest,
+		headers,
+		dest
+	})
 };
 
 if (!params.src || !params.src.length) {
