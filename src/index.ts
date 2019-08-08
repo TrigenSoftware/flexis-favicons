@@ -41,8 +41,17 @@ export {
 };
 
 export interface IConfig {
+	/**
+	 * Relative public path to use in webmanifest and html-headers.
+	 */
 	path?: string;
+	/**
+	 * Webmanifest to add icons. Also can use it to get background color.
+	 */
 	manifest?: IManifestConfig;
+	/**
+	 * Output icons configuration.
+	 */
 	icons?: IIconsConfig;
 }
 

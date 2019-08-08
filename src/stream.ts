@@ -11,8 +11,17 @@ import FaviconsGenerator, {
 } from './';
 
 interface IPluginConfig extends IConfig {
-	headers?: boolean|IHeadersConfig;
+	/**
+	 * Background color for icons and startup images.
+	 */
 	background?: string;
+	/**
+	 * Create html-file with headers for icons.
+	 */
+	headers?: boolean|IHeadersConfig;
+	/**
+	 * Print additional info about progress.
+	 */
 	verbose?: boolean;
 }
 

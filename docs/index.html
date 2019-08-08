@@ -66,22 +66,26 @@
 				<p><a href="https://npmjs.com/package/@flexis/favicons"><img src="https://img.shields.io/npm/v/@flexis/favicons.svg" alt="NPM version"></a>
 					<a href="https://nodejs.org"><img src="https://img.shields.io/node/v/@flexis/favicons.svg" alt="Node version"></a>
 					<a href="https://david-dm.org/TrigenSoftware/flexis-favicons"><img src="https://david-dm.org/TrigenSoftware/flexis-favicons.svg" alt="Dependencies status"></a>
-					<a href="https://travis-ci.com/TrigenSoftware/flexis-favicons"><img src="http://img.shields.io/travis/com/TrigenSoftware/flexis-favicons.svg" alt="Build status"></a>
+					<a href="https://travis-ci.com/TrigenSoftware/flexis-favicons"><img src="https://img.shields.io/travis/com/TrigenSoftware/flexis-favicons/master.svg" alt="Build status"></a>
 					<a href="https://coveralls.io/r/TrigenSoftware/flexis-favicons"><img src="https://img.shields.io/coveralls/TrigenSoftware/flexis-favicons.svg" alt="Coverage status"></a>
-				<a href="https://dependabot.com/"><img src="https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons" alt="Dependabot badge"></a></p>
-				<p>A tool to generate icons for the modern web.</p>
+					<a href="https://dependabot.com/"><img src="https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/flexis-favicons" alt="Dependabot badge"></a>
+				<a href="https://trigensoftware.github.io/flexis-favicons"><img src="https://img.shields.io/badge/API-Documentation-2b7489.svg" alt="Documentation badge"></a></p>
+				<p>A tool for generating icons for the modern web.</p>
 				<ul>
-					<li>Can use it as <a href="#cli">CLI</a> tool, <a href="#gulp">Gulp plugin</a> or <a href="#js-api">JS library</a> 🦄</li>
-					<li>Based on <a href="https://github.com/lovell/sharp">Sharp</a> library - works fast 🚀</li>
-					<li>Generates assets for modern things like <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a> 📲</li>
+					<li>Traditional web favicons ❤️</li>
+					<li>Android and iOS icons, iOS startup screens 🖼</li>
+					<li>Generates assets for <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a> 📲</li>
+					<li>You can run it from the <a href="#cli">CLI</a> ⌨️</li>
+					<li>Works with <a href="#gulp">Gulp</a> and as <a href="#js-api">JS library</a> 🦄</li>
+					<li>Based on <a href="https://github.com/lovell/sharp">Sharp</a> library - lightning fast ⚡️</li>
 				</ul>
 				<h2 id="install">Install</h2>
-				<pre><code class="language-bash">npm i -D @flexis/favicons
+				<pre><code class="language-sh">npm i -D @flexis/favicons
 <span class="hljs-comment"># or</span>
 yarn add -D @flexis/favicons</code></pre>
 				<h2 id="usage">Usage</h2>
 				<h3 id="cli">CLI</h3>
-				<pre><code class="language-bash">npx favicons [...sources] [...options]
+				<pre><code class="language-sh">npx favicons [...sources] [...options]
 <span class="hljs-comment"># or</span>
 yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...options]</code></pre>
 				<table>
@@ -104,7 +108,7 @@ yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...option
 						</tr>
 						<tr>
 							<td>&#x2011;&#x2011;verbose, -v</td>
-							<td>Print additional info about RegExps.</td>
+							<td>Print additional info about progress.</td>
 							<td></td>
 						</tr>
 						<tr>
@@ -183,15 +187,46 @@ yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...option
 							<td></td>
 						</tr>
 				</tbody></table>
-				<p>Also you can create <code>.faviconsrc</code> file:</p>
+				<h4 id="example">Example</h4>
+				<pre><code class="language-sh"><span class="hljs-comment"># From SVG</span>
+favicons src/favicon.svg --manifest src/manifest.json --headers -d build
+<span class="hljs-comment"># From some PNGs with different sizes</span>
+favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span class="hljs-string">"#FACE8D"</span> --headers -d build</code></pre>
+				<h4 id="configuration">Configuration</h4>
+				<p>Configuration file is optional. If needed, can be defined through <code>.faviconsrc</code> JSON file in the root directory of the project.</p>
+				<p>Supported options:</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">interface</span> IConfig {
+    <span class="hljs-comment">/**
+     * Source icon(s) glob patterns.
+     */</span>
     src?: <span class="hljs-built_in">string</span>|<span class="hljs-built_in">string</span>[];
+    <span class="hljs-comment">/**
+     * Relative public path to use in webmanifest and html-headers.
+     */</span>
     path?: <span class="hljs-built_in">string</span>;
-    verbose?: <span class="hljs-built_in">boolean</span>;
+    <span class="hljs-comment">/**
+     * Print additional info about progress.
+     */</span>
     background?: <span class="hljs-built_in">string</span>;
+    <span class="hljs-comment">/**
+     * Path to webmanifest or webmanifest object to add icons. Also can use it to get background color.
+     */</span>
+    manifest?: <span class="hljs-built_in">string</span>|IManifestConfig;
+    <span class="hljs-comment">/**
+     * Output icons configuration.
+     */</span>
     icons?: IIconsConfig;
-    manifest?: <span class="hljs-built_in">string</span>|IManifestConfig; <span class="hljs-comment">// path to source manifset or manifest object</span>
+    <span class="hljs-comment">/**
+     * Create html-file with headers for icons.
+     */</span>
     headers?: <span class="hljs-built_in">boolean</span>|IHeadersConfig;
+    <span class="hljs-comment">/**
+     * Background color for icons and startup images.
+     */</span>
+    verbose?: <span class="hljs-built_in">boolean</span>;
+    <span class="hljs-comment">/**
+     * Destination directory.
+     */</span>
     dest?: <span class="hljs-built_in">string</span>;
 }</code></pre>
 				<ul>
@@ -199,11 +234,6 @@ yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...option
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html"><code>IManifestConfig</code></a></li>
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html"><code>IHeadersConfig</code></a></li>
 				</ul>
-				<h4 id="example">Example</h4>
-				<pre><code class="language-bash"><span class="hljs-comment"># From SVG</span>
-favicons src/favicon.svg --manifest src/manifest.json --headers -d build
-<span class="hljs-comment"># From some PNGs with different sizes</span>
-favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span class="hljs-string">"#FACE8D"</span> --headers -d build</code></pre>
 				<h3 id="gulp">Gulp</h3>
 				<p>Also you can use <code>@flexis/favicons</code> with <a href="https://github.com/gulpjs/gulp">Gulp</a>:</p>
 				<pre><code class="language-js"><span class="hljs-keyword">import</span> favicons <span class="hljs-keyword">from</span> <span class="hljs-string">'@flexis/favicons/stream'</span>;
@@ -219,12 +249,30 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
 );</code></pre>
 				<p>Plugin options:</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">interface</span> IPluginConfig {
+    <span class="hljs-comment">/**
+     * Relative public path to use in webmanifest and html-headers.
+     */</span>
     path?: <span class="hljs-built_in">string</span>;
-    verbose?: <span class="hljs-built_in">boolean</span>;
+    <span class="hljs-comment">/**
+     * Print additional info about progress.
+     */</span>
     background?: <span class="hljs-built_in">string</span>;
-    icons?: IIconsConfig;
+    <span class="hljs-comment">/**
+     * Webmanifest to add icons. Also can use it to get background color.
+     */</span>
     manifest?: IManifestConfig;
+    <span class="hljs-comment">/**
+     * Output icons configuration.
+     */</span>
+    icons?: IIconsConfig;
+    <span class="hljs-comment">/**
+     * Create html-file with headers for icons.
+     */</span>
     headers?: <span class="hljs-built_in">boolean</span>|IHeadersConfig;
+    <span class="hljs-comment">/**
+     * Background color for icons and startup images.
+     */</span>
+    verbose?: <span class="hljs-built_in">boolean</span>;
 }</code></pre>
 				<ul>
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html"><code>IIconsConfig</code></a></li>
@@ -283,6 +331,7 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
 }
 
 generate();</code></pre>
+				<p><a href="https://www.browserstack.com"><img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" width="300"></a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
