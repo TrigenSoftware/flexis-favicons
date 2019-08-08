@@ -103,7 +103,7 @@ interface IConfig {
      */
     path?: string;
     /**
-     * Print additional info about progress.
+     * Background color for icons and startup images.
      */
     background?: string;
     /**
@@ -119,7 +119,7 @@ interface IConfig {
      */
     headers?: boolean|IHeadersConfig;
     /**
-     * Background color for icons and startup images.
+     * Print additional info about progress.
      */
     verbose?: boolean;
     /**
@@ -160,7 +160,7 @@ interface IPluginConfig {
      */
     path?: string;
     /**
-     * Print additional info about progress.
+     * Background color for icons and startup images.
      */
     background?: string;
     /**
@@ -176,7 +176,7 @@ interface IPluginConfig {
      */
     headers?: boolean|IHeadersConfig;
     /**
-     * Background color for icons and startup images.
+     * Print additional info about progress.
      */
     verbose?: boolean;
 }
