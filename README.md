@@ -98,29 +98,29 @@ interface IConfig {
      * Source icon(s) glob patterns.
      */
     src?: string|string[];
-	/**
-	 * Relative public path to use in webmanifest and html-headers.
-	 */
+    /**
+     * Relative public path to use in webmanifest and html-headers.
+     */
     path?: string;
-	/**
-	 * Print additional info about progress.
-	 */
+    /**
+     * Print additional info about progress.
+     */
     background?: string;
-	/**
-	 * Path to webmanifest or webmanifest object to add icons. Also can use it to get background color.
-	 */
+    /**
+     * Path to webmanifest or webmanifest object to add icons. Also can use it to get background color.
+     */
     manifest?: string|IManifestConfig;
-	/**
-	 * Output icons configuration.
-	 */
+    /**
+     * Output icons configuration.
+     */
     icons?: IIconsConfig;
-	/**
-	 * Create html-file with headers for icons.
-	 */
+    /**
+     * Create html-file with headers for icons.
+     */
     headers?: boolean|IHeadersConfig;
-	/**
-	 * Background color for icons and startup images.
-	 */
+    /**
+     * Background color for icons and startup images.
+     */
     verbose?: boolean;
     /**
      * Destination directory.
@@ -155,29 +155,29 @@ Plugin options:
 
 ```ts
 interface IPluginConfig {
-	/**
-	 * Relative public path to use in webmanifest and html-headers.
-	 */
+    /**
+     * Relative public path to use in webmanifest and html-headers.
+     */
     path?: string;
-	/**
-	 * Print additional info about progress.
-	 */
+    /**
+     * Print additional info about progress.
+     */
     background?: string;
-	/**
-	 * Webmanifest to add icons. Also can use it to get background color.
-	 */
+    /**
+     * Webmanifest to add icons. Also can use it to get background color.
+     */
     manifest?: IManifestConfig;
-	/**
-	 * Output icons configuration.
-	 */
+    /**
+     * Output icons configuration.
+     */
     icons?: IIconsConfig;
-	/**
-	 * Create html-file with headers for icons.
-	 */
+    /**
+     * Create html-file with headers for icons.
+     */
     headers?: boolean|IHeadersConfig;
-	/**
-	 * Background color for icons and startup images.
-	 */
+    /**
+     * Background color for icons and startup images.
+     */
     verbose?: boolean;
 }
 ```
