@@ -138,7 +138,7 @@ interface IConfig {
 Also you can use `@flexis/favicons` with [Gulp](https://github.com/gulpjs/gulp):
 
 ```js
-import favicons from '@flexis/favicons/stream';
+import favicons from '@flexis/favicons/lib/stream';
 import manifest from './src/manifest.json';
 
 gulp.task('favicons', () =>
