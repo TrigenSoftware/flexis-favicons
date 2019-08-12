@@ -202,7 +202,7 @@ export {
 };
 ```
 
-[Description of this methods you can find in Documentation.](https://trigensoftware.github.io/flexis-favicons/index.html)
+[Description of all methods you can find in Documentation.](https://trigensoftware.github.io/flexis-favicons/index.html)
 
 #### Example
 
