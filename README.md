@@ -38,6 +38,8 @@ A tool for generating icons for the modern web.
 - Works with [Gulp](#gulp) and as [JS library](#js-api) 🦄
 - Based on [Sharp](https://github.com/lovell/sharp) library - lightning fast ⚡️
 
+<img src="https://pbs.twimg.com/media/EAyJvr5WsAEhw3F?format=jpg&name=medium" width="80%">
+
 ## Install
 
 ```sh
