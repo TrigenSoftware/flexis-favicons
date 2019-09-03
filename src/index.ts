@@ -67,7 +67,9 @@ export default class FaviconsGenerator {
 	}: IConfig = {}) {
 		Object.assign(this.config, {
 			path,
-			manifest,
+			manifest: {
+				...manifest
+			},
 			icons: icons || defaultIcons
 		});
 	}
