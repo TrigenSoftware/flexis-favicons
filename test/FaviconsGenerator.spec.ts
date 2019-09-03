@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Vinyl from 'vinyl';
 import {
-	icons as defaultIcons,
-	manifest as defaultManifset
+	icons as defaultIcons
 } from '../src/defaults';
 import { iconsToGenerate } from '../src/icons';
 import { attachMetadata } from '../src/helpers';
@@ -49,14 +48,13 @@ describe('FaviconsGenerator', () => {
 		let config = (favicons as any).config;
 
 		expect(config.icons).toEqual(defaultIcons);
-		expect(config.manifest).toEqual(defaultManifset);
+		expect(config.manifest).toEqual({});
 
 		favicons = new FaviconsGenerator({ manifest });
 		config = (favicons as any).config;
 
 		expect(config.icons).toEqual(defaultIcons);
 		expect(config.manifest).toEqual({
-			...defaultManifset,
 			...manifest
 		});
 
@@ -68,7 +66,7 @@ describe('FaviconsGenerator', () => {
 		config = (favicons as any).config;
 
 		expect(config.icons).toEqual(icons);
-		expect(config.manifest).toEqual(defaultManifset);
+		expect(config.manifest).toEqual({});
 	});
 
 	describe('#generateIcons', () => {
@@ -150,7 +148,6 @@ describe('FaviconsGenerator', () => {
 
 			expect(outputManifest.icons.length).toBe(9);
 			expect({
-				...defaultManifset,
 				...manifest,
 				icons: outputManifest.icons
 			}).toEqual(outputManifest);

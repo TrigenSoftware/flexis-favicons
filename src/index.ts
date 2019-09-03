@@ -20,8 +20,7 @@ import {
 	applyPath
 } from './helpers';
 import {
-	icons as defaultIcons,
-	manifest as defaultManifest
+	icons as defaultIcons
 } from './defaults';
 import renderIcon from './renderIcon';
 import htmlHeaders, {
@@ -68,10 +67,7 @@ export default class FaviconsGenerator {
 	}: IConfig = {}) {
 		Object.assign(this.config, {
 			path,
-			manifest: {
-				...defaultManifest,
-				...manifest
-			},
+			manifest,
 			icons: icons || defaultIcons
 		});
 	}
