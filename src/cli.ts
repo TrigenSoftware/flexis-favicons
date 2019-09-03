@@ -168,6 +168,10 @@ function configIcon(
 		config.offset = Number(offset);
 	}
 
+	if (!Object.keys(config).length) {
+		return true;
+	}
+
 	return config;
 }
 
