@@ -162,6 +162,8 @@ function configIcon(
 
 	if (background) {
 		config.background = background;
+	} else {
+		config.background = 'white';
 	}
 
 	if (offset) {
