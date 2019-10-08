@@ -66,7 +66,7 @@ export default function plugin({
 				}
 			}
 			: options
-		);
+	);
 	const sources: Vinyl[] = [];
 
 	function each(file, _, next) {

@@ -68,6 +68,7 @@ export default class FaviconsGenerator {
 		Object.assign(this.config, {
 			path,
 			manifest: {
+				background_color: '#fff',
 				...manifest
 			},
 			icons: icons || defaultIcons
