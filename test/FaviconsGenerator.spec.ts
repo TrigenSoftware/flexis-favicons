@@ -48,7 +48,9 @@ describe('FaviconsGenerator', () => {
 		let config = (favicons as any).config;
 
 		expect(config.icons).toEqual(defaultIcons);
-		expect(config.manifest).toEqual({});
+		expect(config.manifest).toEqual({
+			background_color: '#fff'
+		});
 
 		favicons = new FaviconsGenerator({ manifest });
 		config = (favicons as any).config;
@@ -66,7 +68,9 @@ describe('FaviconsGenerator', () => {
 		config = (favicons as any).config;
 
 		expect(config.icons).toEqual(icons);
-		expect(config.manifest).toEqual({});
+		expect(config.manifest).toEqual({
+			background_color: '#fff'
+		});
 	});
 
 	describe('#generateIcons', () => {
