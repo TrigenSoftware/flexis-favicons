@@ -51,17 +51,20 @@
     "@types/vinyl": "^2.0.3",
     "@types/vinyl-fs": "^2.4.11",
     "argue-cli": "^1.2.1",
+    "canvas": "^2.6.1",
+    "canvg": "^3.0.2",
     "chalk": "^2.4.2",
     "core-js": "3",
     "easy-table": "^1.1.1",
+    "node-fetch": "^2.6.0",
     "omit-empty": "^1.0.0",
     "rcfile": "^1.0.3",
     "sharp": "^0.23.0",
-    "svg2img": "^0.6.0",
     "through2-concurrent": "^2.0.0",
     "to-ico": "^1.1.5",
     "vinyl": "^2.1.0",
-    "vinyl-fs": "^3.0.3"
+    "vinyl-fs": "^3.0.3",
+    "xmldom": "^0.2.1"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^2.1.2",

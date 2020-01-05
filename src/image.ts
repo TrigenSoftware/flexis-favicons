@@ -1,9 +1,13 @@
-import {
-	promisify
-} from 'util';
 import Vinyl from 'vinyl';
 import Sharp from 'sharp';
-import svg2imgCb from 'svg2img';
+import {
+	DOMParser
+} from 'xmldom';
+import * as canvas from 'canvas';
+import fetch from 'node-fetch';
+import Canvg, {
+	presets
+} from 'canvg';
 import {
 	ISize,
 	IRenderConfig
@@ -16,7 +20,11 @@ import {
 const PERCENTS_100 = 100;
 const TWICE = 2;
 
-const svg2img = promisify(svg2imgCb);
+const nodeCanvgPreset = presets.node({
+	DOMParser,
+	canvas,
+	fetch
+});
 
 /**
  * Attach image metadata to the vinyl file.
@@ -136,15 +144,23 @@ async function getSuitableSourceBuffer(
 
 		await attachMetadata(svgSource);
 
-		const icon: Buffer = await svg2img((svgSource.contents as Buffer).toString('utf8'), {
-			preserveAspectRatio: 'xMidYMid meet',
-			...getContainSize({
-				width,
-				height
-			}, svgSource.metadata)
-		});
+		const svg = (svgSource.contents as Buffer).toString('utf8');
+		const {
+			width: desiredWidth,
+			height: desiredHeight
+		} = getContainSize({
+			width,
+			height
+		}, svgSource.metadata);
+		const c = nodeCanvgPreset.createCanvas(0, 0);
+		const ctx = c.getContext('2d');
+		const v = Canvg.fromString(ctx, svg, nodeCanvgPreset);
 
-		return icon;
+		v.resize(desiredWidth, desiredHeight, 'xMidYMid meet');
+
+		await v.render();
+
+		return c.toBuffer();
 	}
 
 	for (const source of sources) {
