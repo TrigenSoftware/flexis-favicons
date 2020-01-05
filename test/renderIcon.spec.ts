@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import renderIcon from '../src/renderIcon';
+import {
+	renderIcon
+} from '../src/image';
 import {
 	svg,
 	png
@@ -18,7 +20,6 @@ describe('renderIcon', () => {
 	it('should render correct icon from svg', async () => {
 
 		const icon = await renderIcon([svg], {
-			rotate:     false,
 			width:      80,
 			height:     80,
 			background: 'red',
@@ -32,7 +33,6 @@ describe('renderIcon', () => {
 	it('should render correct icon from png', async () => {
 
 		const icon = await renderIcon([png], {
-			rotate:     false,
 			width:      80,
 			height:     80,
 			background: 'red',
@@ -46,7 +46,6 @@ describe('renderIcon', () => {
 	it('should render correct rotated icon from svg', async () => {
 
 		const icon = await renderIcon([svg], {
-			rotate:     true,
 			width:      128,
 			height:     128,
 			background: 'blue',
@@ -60,7 +59,6 @@ describe('renderIcon', () => {
 	it('should render correct rotated icon from png', async () => {
 
 		const icon = await renderIcon([png], {
-			rotate:     true,
 			width:      128,
 			height:     128,
 			background: 'blue',
@@ -74,7 +72,6 @@ describe('renderIcon', () => {
 	it('should render correct rotated non-square icon from svg', async () => {
 
 		const icon = await renderIcon([svg], {
-			rotate:     true,
 			width:      256,
 			height:     512,
 			background: 'blue',
@@ -88,7 +85,6 @@ describe('renderIcon', () => {
 	it('should render correct rotated non-square icon from png', async () => {
 
 		const icon = await renderIcon([png], {
-			rotate:     true,
 			width:      256,
 			height:     512,
 			background: 'blue',

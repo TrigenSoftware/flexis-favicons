@@ -4,10 +4,16 @@ import Vinyl from 'vinyl';
 import {
 	icons as defaultIcons
 } from '../src/defaults';
-import { iconsToGenerate } from '../src/icons';
-import { attachMetadata } from '../src/helpers';
+import {
+	iconsToGenerate
+} from '../src/icons';
+import {
+	attachMetadata
+} from '../src/image';
 import FaviconsGenerator from '../src';
-import { svg } from './favicon';
+import {
+	svg
+} from './favicon';
 
 async function vinylsFromAsyncIterator(iterator: AsyncIterableIterator<Vinyl>): Promise<Vinyl[]> {
 

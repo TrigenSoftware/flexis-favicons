@@ -1,6 +1,6 @@
 import {
 	IHtmlHeader
-} from './htmlHeaders';
+} from './types';
 
 const attributeNamesOrder = [
 	'name',

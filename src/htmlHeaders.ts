@@ -1,37 +1,20 @@
 import {
-	applyPath
-} from './helpers';
-import {
-	IManifestConfig
-} from './manifest';
-import {
 	IIconToGenerateConfig,
+	IHeadersConfig,
+	IHtmlHeader
+} from './types';
+import {
+	applyPath
+} from './util';
+import {
 	iconsToGenerate
 } from './icons';
 
-export interface IHeadersConfig {
-	path?: string;
-	manifest?: IManifestConfig;
-	webAppCapable?: 'yes'|'no';
-	webAppStatusBarStyle?: 'default'|'black'|'black-translucent';
-}
-
-export interface IHtmlHeader {
-	tagName: string;
-	name?: string;
-	content?: string;
-	rel?: string;
-	type?: string;
-	sizes?: string;
-	media?: string;
-	href?: string;
-}
-
 export default {
-	favicon:      faviconHeaders,
-	android:      androidHeaders,
-	apple:        appleHeaders,
-	appleStartup: appleStartupHeaders
+	favicon:      getFaviconHeaders,
+	android:      getAndroidHeaders,
+	apple:        getAppleHeaders,
+	appleStartup: getAppleStartupHeaders
 };
 
 /**
@@ -39,7 +22,7 @@ export default {
  * @param  headersConfig - Config params.
  * @return Array of headers objects.
  */
-function faviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
+function getFaviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
 	return Object.entries(iconsToGenerate.favicon).map(([filename, {
 		sizes,
 		width,
@@ -66,7 +49,7 @@ function faviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
  * @param  headersConfig - Config params.
  * @return Array of headers objects.
  */
-function androidHeaders({
+function getAndroidHeaders({
 	path,
 	webAppCapable = 'yes',
 	manifest: {
@@ -112,7 +95,7 @@ function androidHeaders({
  * @param  headersConfig - Config params.
  * @return Array of headers objects.
  */
-function appleHeaders({
+function getAppleHeaders({
 	path,
 	webAppCapable = 'yes',
 	webAppStatusBarStyle = 'black-translucent',
@@ -196,7 +179,7 @@ function getAppleStartupMediaQuery(
  * @param  headersConfig - Config params.
  * @return Array of headers objects.
  */
-function appleStartupHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
+function getAppleStartupHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
 	return Object.entries(iconsToGenerate.appleStartup).map(([filename, config]) => ({
 		tagName: 'link',
 		rel:     'apple-touch-startup-image',

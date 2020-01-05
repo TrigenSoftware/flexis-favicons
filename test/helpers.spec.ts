@@ -1,8 +1,12 @@
 import {
-	attachMetadata,
+	attachMetadata
+} from '../src/image';
+import {
 	applyPath
-} from '../src/helpers';
-import { getCompleteIconConfig } from '../src/icons';
+} from '../src/util';
+import {
+	getCompleteIconConfig
+} from '../src/icons';
 import getHtmlHeadersMarkup from '../src/getHtmlHeadersMarkup';
 import {
 	svg,

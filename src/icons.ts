@@ -1,29 +1,9 @@
 import {
+	IIconConfig,
+	IIconsConfig,
+	IIconToGenerateConfig,
 	IManifestConfig
-} from './manifest';
-
-export interface IIconConfig {
-	offset?: number;
-	background?: boolean|string;
-}
-
-export interface IIconsConfig {
-	favicon?: boolean;
-	android?: boolean|IIconConfig;
-	apple?: boolean|IIconConfig;
-	appleStartup?: boolean|IIconConfig;
-}
-
-export interface ISize {
-	width?: number;
-	height?: number;
-}
-
-export interface IIconToGenerateConfig extends ISize {
-	sizes?: ISize[];
-	rotate?: boolean;
-	pixelRatio?: number;
-}
+} from './types';
 
 interface IIconsToGenerate {
 	[type: string]: {

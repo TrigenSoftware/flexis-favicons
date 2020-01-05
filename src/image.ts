@@ -5,21 +5,13 @@ import Vinyl from 'vinyl';
 import Sharp from 'sharp';
 import svg2imgCb from 'svg2img';
 import {
-	ISize
-} from './icons';
+	ISize,
+	IRenderConfig
+} from './types';
 import {
+	isIco,
 	isSvg
 } from './extensions';
-import {
-	attachMetadata
-} from './helpers';
-
-interface IRenderConfig {
-	width: number;
-	height: number;
-	background: string;
-	offset: number;
-}
 
 const PERCENTS_100 = 100;
 const TWICE = 2;
@@ -27,12 +19,36 @@ const TWICE = 2;
 const svg2img = promisify(svg2imgCb);
 
 /**
+ * Attach image metadata to the vinyl file.
+ * @param  source - Image file.
+ * @return Source image file with attached metadata.
+ */
+export async function attachMetadata(source: Vinyl) {
+
+	if (typeof source.metadata === 'object') {
+		return source;
+	}
+
+	if (isIco(source.basename)) {
+		source.metadata = {
+			format: 'ico',
+			width:  16,
+			height: 16
+		};
+	} else {
+		source.metadata = await Sharp(source.contents as Buffer).metadata();
+	}
+
+	return source;
+}
+
+/**
  * Render icon.
  * @param  sources - Array of sources.
  * @param  renderConfig - Render config.
  * @return Rendered icon.
  */
-export default async function renderIcon(sources: Vinyl[], {
+export async function renderIcon(sources: Vinyl[], {
 	width,
 	height,
 	background,
@@ -77,7 +93,6 @@ function createCanvas(
 /**
  * Create sprite.
  * @param  sources - Sprite sources.
- * @param  rotate - Rotate 90deg or not.
  * @param  width - Width of sprite.
  * @param  height - Height of sprite.
  * @param  offset - Offset from canvas edges.
