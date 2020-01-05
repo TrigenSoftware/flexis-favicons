@@ -46,7 +46,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "@types/node": "^13.1.2",
-    "@types/sharp": "^0.22.2",
+    "@types/sharp": "^0.23.1",
     "@types/through2-concurrent": "^2.0.0",
     "@types/vinyl": "^2.0.3",
     "@types/vinyl-fs": "^2.4.11",
