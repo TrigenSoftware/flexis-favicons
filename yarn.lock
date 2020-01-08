@@ -1221,18 +1221,6 @@
     rcfile "^1.0.3"
     resolve-cwd "^3.0.0"
 
-"@trigen/scripts@^2.7.0":
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/@trigen/scripts/-/scripts-2.7.0.tgz#7a36334f65a868f8a424c73c3a36e6bfa0964b67"
-  integrity sha512-xvRY6StDwCplpPQK1JzKopnYEQnhxa6mxPJz5D+ut39SblwcZWGcFFDG5QbbBWhurq9Lb0bnKhSfLNbHmWnLpw==
-  dependencies:
-    "@babel/runtime" "^7.4.2"
-    chalk "^2.4.2"
-    core-js "3"
-    immutability-helper "^3.0.0"
-    rcfile "^1.0.3"
-    resolve-cwd "^3.0.0"
-
 "@types/babel__core@^7.1.0":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
@@ -1341,9 +1329,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*", "@types/node@^13.1.2":
-  version "13.1.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.2.tgz#fe94285bf5e0782e1a9e5a8c482b1c34465fa385"
-  integrity sha512-B8emQA1qeKerqd1dmIsQYnXi+mmAzTB7flExjmy5X1aVAKFNNNDubkavwR13kR6JnpeLp3aLoJhwn9trWPAyFQ==
+  version "13.1.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.5.tgz#4d5efc52a1d3e45d13e5ec9f911cbc5b089ccaec"
+  integrity sha512-wupvfmtbqRJzjCm1H2diy7wo31Gn1OzvqoxCfQuKM9eSecogzP0WTlrjdq7cf7jgSO2ZX6hxwgRPR8Wt7FA22g==
 
 "@types/node@^12.6.2":
   version "12.7.11"
