@@ -3,7 +3,7 @@ import {
 } from 'os';
 import Vinyl from 'vinyl';
 import through from 'through2-concurrent';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import FaviconsGenerator, {
 	IHeadersConfig,
 	IConfig,
