@@ -67,7 +67,7 @@
     "xmldom": "^0.2.1"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^2.1.2",
+    "@size-limit/preset-small-lib": "^3.0.0",
     "@trigen/scripts": "3",
     "@trigen/scripts-plugin-babel": "3",
     "@trigen/scripts-plugin-eslint": "3",
