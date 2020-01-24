@@ -77,7 +77,7 @@
     "@trigen/scripts-plugin-typescript": "4.0.0",
     "@trigen/scripts-preset-lib": "4.0.0",
     "rollup-plugin-add-shebang": "^0.3.1",
-    "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-tslint": "^0.2.2",
     "rollup-plugin-typescript2": "^0.25.3"
   },
