@@ -88,7 +88,7 @@ function createCanvas(
 	height: number,
 	background: string
 ) {
-	return Sharp(undefined, {
+	return Sharp({
 		create: {
 			width,
 			height,
