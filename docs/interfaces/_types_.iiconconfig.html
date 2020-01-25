@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;helpers&quot; | @flexis/favicons</title>
+	<title>IIconConfig | @flexis/favicons</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,101 +54,69 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_helpers_.html">&quot;helpers&quot;</a>
+					<a href="../modules/_types_.html">&quot;types&quot;</a>
+				</li>
+				<li>
+					<a href="_types_.iiconconfig.html">IIconConfig</a>
 				</li>
 			</ul>
-			<h1>External module &quot;helpers&quot;</h1>
+			<h1>Interface IIconConfig</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Icons</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IIconConfig</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_helpers_.html#applypath" class="tsd-kind-icon">apply<wbr>Path</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_helpers_.html#attachmetadata" class="tsd-kind-icon">attach<wbr>Metadata</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_.iiconconfig.html#background" class="tsd-kind-icon">background</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_.iiconconfig.html#offset" class="tsd-kind-icon">offset</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="applypath" class="tsd-anchor"></a>
-					<h3>apply<wbr>Path</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">apply<wbr>Path<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/helpers.ts#L40">helpers.ts:40</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Add path to file name.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>path: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Path to destination folder.</p>
-									</div>
-								</li>
-								<li>
-									<h5>filename: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Target file name.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-							<p>Full path to file.</p>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="background" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> background</h3>
+					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/types.ts#L8">src/types.ts:8</a></li>
+						</ul>
+					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="attachmetadata" class="tsd-anchor"></a>
-					<h3>attach<wbr>Metadata</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">attach<wbr>Metadata<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vinyl</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/helpers.ts#L15">helpers.ts:15</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Attach image metadata to the vinyl file.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>source: <span class="tsd-signature-type">Vinyl</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Image file.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>Source image file with attached metadata.</p>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="offset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> offset</h3>
+					<div class="tsd-signature tsd-kind-icon">offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/types.ts#L7">src/types.ts:7</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -159,47 +127,86 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_cli_.html">"cli"</a>
+						<a href="../modules/_faviconsgenerator_.html">&quot;<wbr>Favicons<wbr>Generator&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_defaults_.html">"defaults"</a>
+						<a href="../modules/_cli_.html">&quot;cli&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_extensions_.html">"extensions"</a>
+						<a href="../modules/_defaults_.html">&quot;defaults&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_gethtmlheadersmarkup_.html">"get<wbr>Html<wbr>Headers<wbr>Markup"</a>
+						<a href="../modules/_extensions_.html">&quot;extensions&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_gethtmlheadersmarkup_.html">&quot;get<wbr>Html<wbr>Headers<wbr>Markup&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_htmlheaders_.html">&quot;html<wbr>Headers&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_icons_.html">&quot;icons&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_image_.html">&quot;image&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_stream_.html">&quot;stream&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_helpers_.html">"helpers"</a>
+						<a href="../modules/_types_.html">&quot;types&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_htmlheaders_.html">"html<wbr>Headers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_icons_.html">"icons"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_manifest_.html">"manifest"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_rendericon_.html">"render<wbr>Icon"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_stream_.html">"stream"</a>
+						<a href="../modules/_util_.html">&quot;util&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_helpers_.html#applypath" class="tsd-kind-icon">apply<wbr>Path</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.iheadersconfig.html" class="tsd-kind-icon">IHeaders<wbr>Config</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_helpers_.html#attachmetadata" class="tsd-kind-icon">attach<wbr>Metadata</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.ihtmlheader.html" class="tsd-kind-icon">IHtml<wbr>Header</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.iiconconfig.html" class="tsd-kind-icon">IIcon<wbr>Config</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_types_.iiconconfig.html#background" class="tsd-kind-icon">background</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_types_.iiconconfig.html#offset" class="tsd-kind-icon">offset</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.iicontogenerateconfig.html" class="tsd-kind-icon">IIcon<wbr>ToGenerate<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.iiconsconfig.html" class="tsd-kind-icon">IIcons<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.imanifestconfig.html" class="tsd-kind-icon">IManifest<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.imanifesticon.html" class="tsd-kind-icon">IManifest<wbr>Icon</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.imanifestrelatedapplication.html" class="tsd-kind-icon">IManifest<wbr>Related<wbr>Application</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.irenderconfig.html" class="tsd-kind-icon">IRender<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_.isize.html" class="tsd-kind-icon">ISize</a>
 					</li>
 				</ul>
 			</nav>
@@ -218,6 +225,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -266,7 +274,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

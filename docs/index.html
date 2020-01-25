@@ -54,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> @flexis/favicons</h1>
+			<h1>@flexis/favicons</h1>
 		</div>
 	</div>
 </header>
@@ -62,7 +62,9 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="-flexis-favicons">@flexis/favicons</h1>
+				<a href="#flexisfavicons" id="flexisfavicons" style="color: inherit; text-decoration: none;">
+					<h1>@flexis/favicons</h1>
+				</a>
 				<p><a href="https://npmjs.com/package/@flexis/favicons"><img src="https://img.shields.io/npm/v/@flexis/favicons.svg" alt="NPM version"></a>
 					<a href="https://nodejs.org"><img src="https://img.shields.io/node/v/@flexis/favicons.svg" alt="Node version"></a>
 					<a href="https://david-dm.org/TrigenSoftware/flexis-favicons"><img src="https://david-dm.org/TrigenSoftware/flexis-favicons.svg" alt="Dependencies status"></a>
@@ -79,12 +81,19 @@
 					<li>Works with <a href="#gulp">Gulp</a> and as <a href="#js-api">JS library</a> 🦄</li>
 					<li>Based on <a href="https://github.com/lovell/sharp">Sharp</a> library - lightning fast ⚡️</li>
 				</ul>
-				<h2 id="install">Install</h2>
+				<img src="https://pbs.twimg.com/media/EAyJvr5WsAEhw3F?format=jpg&name=medium" width="80%">
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h2>Install</h2>
+				</a>
 				<pre><code class="language-sh">npm i -D @flexis/favicons
 <span class="hljs-comment"># or</span>
 yarn add -D @flexis/favicons</code></pre>
-				<h2 id="usage">Usage</h2>
-				<h3 id="cli">CLI</h3>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<a href="#cli" id="cli" style="color: inherit; text-decoration: none;">
+					<h3>CLI</h3>
+				</a>
 				<pre><code class="language-sh">npx favicons [...sources] [...options]
 <span class="hljs-comment"># or</span>
 yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...options]</code></pre>
@@ -187,12 +196,16 @@ yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...option
 							<td></td>
 						</tr>
 				</tbody></table>
-				<h4 id="example">Example</h4>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
 				<pre><code class="language-sh"><span class="hljs-comment"># From SVG</span>
 favicons src/favicon.svg --manifest src/manifest.json --headers -d build
 <span class="hljs-comment"># From some PNGs with different sizes</span>
 favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span class="hljs-string">"#FACE8D"</span> --headers -d build</code></pre>
-				<h4 id="configuration">Configuration</h4>
+				<a href="#configuration" id="configuration" style="color: inherit; text-decoration: none;">
+					<h4>Configuration</h4>
+				</a>
 				<p>Configuration file is optional. If needed, can be defined through <code>.faviconsrc</code> JSON file in the root directory of the project.</p>
 				<p>Supported options:</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">interface</span> IConfig {
@@ -234,7 +247,9 @@ favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span c
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html"><code>IManifestConfig</code></a></li>
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html"><code>IHeadersConfig</code></a></li>
 				</ul>
-				<h3 id="gulp">Gulp</h3>
+				<a href="#gulp" id="gulp" style="color: inherit; text-decoration: none;">
+					<h3>Gulp</h3>
+				</a>
 				<p>Also you can use <code>@flexis/favicons</code> with <a href="https://github.com/gulpjs/gulp">Gulp</a>:</p>
 				<pre><code class="language-js"><span class="hljs-keyword">import</span> favicons <span class="hljs-keyword">from</span> <span class="hljs-string">'@flexis/favicons/lib/stream'</span>;
 <span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/manifest.json'</span>;
@@ -279,7 +294,9 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html"><code>IManifestConfig</code></a></li>
 					<li><a href="https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html"><code>IHeadersConfig</code></a></li>
 				</ul>
-				<h3 id="js-api">JS API</h3>
+				<a href="#js-api" id="js-api" style="color: inherit; text-decoration: none;">
+					<h3>JS API</h3>
+				</a>
 				<p>Module exposes next API:</p>
 				<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> FaviconsGenerator;
 <span class="hljs-keyword">export</span> {
@@ -290,8 +307,10 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
     IConfig,
     getHtmlHeadersMarkup
 };</code></pre>
-				<p><a href="https://trigensoftware.github.io/flexis-favicons/index.html">Description of this methods you can find in Documentation.</a></p>
-				<h4 id="example">Example</h4>
+				<p><a href="https://trigensoftware.github.io/flexis-favicons/index.html">Description of all methods you can find in Documentation.</a></p>
+				<a href="#example-1" id="example-1" style="color: inherit; text-decoration: none;">
+					<h4>Example</h4>
+				</a>
 				<pre><code class="language-js"><span class="hljs-keyword">import</span> {
     promises <span class="hljs-keyword">as</span> fs
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'fs'</span>;
@@ -341,37 +360,40 @@ generate();</code></pre>
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_cli_.html">"cli"</a>
+						<a href="modules/_faviconsgenerator_.html">&quot;<wbr>Favicons<wbr>Generator&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_defaults_.html">"defaults"</a>
+						<a href="modules/_cli_.html">&quot;cli&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_extensions_.html">"extensions"</a>
+						<a href="modules/_defaults_.html">&quot;defaults&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_gethtmlheadersmarkup_.html">"get<wbr>Html<wbr>Headers<wbr>Markup"</a>
+						<a href="modules/_extensions_.html">&quot;extensions&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_helpers_.html">"helpers"</a>
+						<a href="modules/_gethtmlheadersmarkup_.html">&quot;get<wbr>Html<wbr>Headers<wbr>Markup&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_htmlheaders_.html">"html<wbr>Headers"</a>
+						<a href="modules/_htmlheaders_.html">&quot;html<wbr>Headers&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_icons_.html">"icons"</a>
+						<a href="modules/_icons_.html">&quot;icons&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
+						<a href="modules/_image_.html">&quot;image&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_manifest_.html">"manifest"</a>
+						<a href="modules/_index_.html">&quot;index&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_rendericon_.html">"render<wbr>Icon"</a>
+						<a href="modules/_stream_.html">&quot;stream&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_stream_.html">"stream"</a>
+						<a href="modules/_types_.html">&quot;types&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_util_.html">&quot;util&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -394,6 +416,7 @@ generate();</code></pre>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -442,7 +465,7 @@ generate();</code></pre>
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>

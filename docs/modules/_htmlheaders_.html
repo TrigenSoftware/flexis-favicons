@@ -68,21 +68,14 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_htmlheaders_.iheadersconfig.html" class="tsd-kind-icon">IHeaders<wbr>Config</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-kind-icon">IHtml<wbr>Header</a></li>
-							</ul>
-						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#androidheaders" class="tsd-kind-icon">android<wbr>Headers</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#appleheaders" class="tsd-kind-icon">apple<wbr>Headers</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#applestartupheaders" class="tsd-kind-icon">apple<wbr>Startup<wbr>Headers</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#faviconheaders" class="tsd-kind-icon">favicon<wbr>Headers</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#getandroidheaders" class="tsd-kind-icon">get<wbr>Android<wbr>Headers</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#getappleheaders" class="tsd-kind-icon">get<wbr>Apple<wbr>Headers</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#getapplestartupheaders" class="tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Headers</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#getapplestartupmediaquery" class="tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Media<wbr>Query</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_htmlheaders_.html#getfaviconheaders" class="tsd-kind-icon">get<wbr>Favicon<wbr>Headers</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,16 +84,16 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="androidheaders" class="tsd-anchor"></a>
-					<h3>android<wbr>Headers</h3>
+					<a name="getandroidheaders" class="tsd-anchor"></a>
+					<h3>get<wbr>Android<wbr>Headers</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">android<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Android<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>themeColor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>webAppCapable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"yes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no"</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/htmlHeaders.ts#L69">htmlHeaders.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/htmlHeaders.ts#L52">src/htmlHeaders.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -111,10 +104,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>themeColor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>webAppCapable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"yes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no"</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+											<h5>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>themeColor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 											<ul class="tsd-parameters">
 												<li class="tsd-parameter">
 													<h5>application<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -133,22 +126,22 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
 							<p>Array of headers objects.</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="appleheaders" class="tsd-anchor"></a>
-					<h3>apple<wbr>Headers</h3>
+					<a name="getappleheaders" class="tsd-anchor"></a>
+					<h3>get<wbr>Apple<wbr>Headers</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">apple<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Apple<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>webAppCapable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"yes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no"</span><span class="tsd-signature-symbol">; </span>webAppStatusBarStyle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"default"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"black"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"black-translucent"</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/htmlHeaders.ts#L115">htmlHeaders.ts:115</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/htmlHeaders.ts#L98">src/htmlHeaders.ts:98</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -159,10 +152,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>webAppCapable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"yes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"no"</span><span class="tsd-signature-symbol">; </span>webAppStatusBarStyle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"default"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"black"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"black-translucent"</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+											<h5>manifest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 											<ul class="tsd-parameters">
 												<li class="tsd-parameter">
 													<h5>application<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -181,22 +174,22 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
 							<p>Array of headers objects.</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="applestartupheaders" class="tsd-anchor"></a>
-					<h3>apple<wbr>Startup<wbr>Headers</h3>
+					<a name="getapplestartupheaders" class="tsd-anchor"></a>
+					<h3>get<wbr>Apple<wbr>Startup<wbr>Headers</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">apple<wbr>Startup<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/htmlHeaders.ts#L199">htmlHeaders.ts:199</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/htmlHeaders.ts#L182">src/htmlHeaders.ts:182</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -207,7 +200,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
@@ -215,41 +208,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
-							<p>Array of headers objects.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="faviconheaders" class="tsd-anchor"></a>
-					<h3>favicon<wbr>Headers</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">favicon<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/htmlHeaders.ts#L42">htmlHeaders.ts:42</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Get &quot;favicon&quot; headers.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
 							<p>Array of headers objects.</p>
 						</li>
 					</ul>
@@ -258,13 +217,13 @@
 					<a name="getapplestartupmediaquery" class="tsd-anchor"></a>
 					<h3>get<wbr>Apple<wbr>Startup<wbr>Media<wbr>Query</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Media<wbr>Query<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Media<wbr>Query<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maybePixelRatio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>rotate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/08ee825/src/htmlHeaders.ts#L165">htmlHeaders.ts:165</a></li>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/htmlHeaders.ts#L148">src/htmlHeaders.ts:148</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -275,7 +234,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>maybePixelRatio<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>rotate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
@@ -297,6 +256,40 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="getfaviconheaders" class="tsd-anchor"></a>
+					<h3>get<wbr>Favicon<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Favicon<wbr>Headers<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/TrigenSoftware/flexis-favicons/blob/dcac3c2/src/htmlHeaders.ts#L25">src/htmlHeaders.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get &quot;favicon&quot; headers.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_types_.ihtmlheader.html" class="tsd-signature-type">IHtmlHeader</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>Array of headers objects.</p>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -306,62 +299,59 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_cli_.html">"cli"</a>
+						<a href="_faviconsgenerator_.html">&quot;<wbr>Favicons<wbr>Generator&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_defaults_.html">"defaults"</a>
+						<a href="_cli_.html">&quot;cli&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_extensions_.html">"extensions"</a>
+						<a href="_defaults_.html">&quot;defaults&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_gethtmlheadersmarkup_.html">"get<wbr>Html<wbr>Headers<wbr>Markup"</a>
+						<a href="_extensions_.html">&quot;extensions&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_helpers_.html">"helpers"</a>
+						<a href="_gethtmlheadersmarkup_.html">&quot;get<wbr>Html<wbr>Headers<wbr>Markup&quot;</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_htmlheaders_.html">"html<wbr>Headers"</a>
+						<a href="_htmlheaders_.html">&quot;html<wbr>Headers&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_icons_.html">"icons"</a>
+						<a href="_icons_.html">&quot;icons&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
+						<a href="_image_.html">&quot;image&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_manifest_.html">"manifest"</a>
+						<a href="_index_.html">&quot;index&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_rendericon_.html">"render<wbr>Icon"</a>
+						<a href="_stream_.html">&quot;stream&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_stream_.html">"stream"</a>
+						<a href="_types_.html">&quot;types&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_util_.html">&quot;util&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_htmlheaders_.iheadersconfig.html" class="tsd-kind-icon">IHeaders<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_htmlheaders_.ihtmlheader.html" class="tsd-kind-icon">IHtml<wbr>Header</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_htmlheaders_.html#getandroidheaders" class="tsd-kind-icon">get<wbr>Android<wbr>Headers</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_htmlheaders_.html#androidheaders" class="tsd-kind-icon">android<wbr>Headers</a>
+						<a href="_htmlheaders_.html#getappleheaders" class="tsd-kind-icon">get<wbr>Apple<wbr>Headers</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_htmlheaders_.html#appleheaders" class="tsd-kind-icon">apple<wbr>Headers</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_htmlheaders_.html#applestartupheaders" class="tsd-kind-icon">apple<wbr>Startup<wbr>Headers</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_htmlheaders_.html#faviconheaders" class="tsd-kind-icon">favicon<wbr>Headers</a>
+						<a href="_htmlheaders_.html#getapplestartupheaders" class="tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Headers</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_htmlheaders_.html#getapplestartupmediaquery" class="tsd-kind-icon">get<wbr>Apple<wbr>Startup<wbr>Media<wbr>Query</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_htmlheaders_.html#getfaviconheaders" class="tsd-kind-icon">get<wbr>Favicon<wbr>Headers</a>
 					</li>
 				</ul>
 			</nav>
@@ -380,6 +370,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -428,7 +419,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
