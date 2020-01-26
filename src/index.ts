@@ -7,6 +7,7 @@ import FaviconsGeneratorBase, {
 } from './FaviconsGenerator';
 
 export * from './types';
+export * from './extensions';
 
 export {
 	default as getHtmlHeadersMarkup
