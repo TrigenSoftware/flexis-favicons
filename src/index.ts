@@ -1,22 +1,12 @@
 import {
+	FaviconsGenerator as FaviconsGeneratorBase
+} from './core';
+import {
 	attachMetadata,
 	renderIcon
 } from './image';
-import FaviconsGeneratorBase, {
-	IConfig
-} from './FaviconsGenerator';
 
-export * from './types';
-export * from './extensions';
-
-export {
-	default as getHtmlHeadersMarkup
-} from './getHtmlHeadersMarkup';
-
-export {
-	IConfig,
-	FaviconsGeneratorBase as FaviconsGenerator
-};
+export * from './core';
 
 export default class FaviconsGenerator extends FaviconsGeneratorBase {
 

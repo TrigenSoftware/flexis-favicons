@@ -50,7 +50,7 @@ function entryToString([key, value]: [string, string]) {
  * @param  header - Object or array of objects with header info.
  * @return HTML-markup.
  */
-export default function getHtmlHeadersMarkup(header: IHtmlHeader|IHtmlHeader[]): string {
+export function getHtmlHeadersMarkup(header: IHtmlHeader|IHtmlHeader[]): string {
 
 	if (Array.isArray(header)) {
 		return header.map(getHtmlHeadersMarkup).join('\n');

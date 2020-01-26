@@ -1,3 +1,4 @@
+// tslint:disable: no-magic-numbers
 import Vinyl from 'vinyl';
 import Sharp from 'sharp';
 import {
@@ -16,9 +17,6 @@ import {
 	isIco,
 	isSvg
 } from './extensions';
-
-const PERCENTS_100 = 100;
-const TWICE = 2;
 
 const nodeCanvgPreset = presets.node({
 	DOMParser,
@@ -64,7 +62,7 @@ export async function renderIcon(sources: Vinyl[], {
 }: IRenderConfig) {
 
 	const maximumSide = Math.max(width, height);
-	const offsetPx = Math.round(maximumSide / PERCENTS_100 * offset) || 0;
+	const offsetPx = Math.round(maximumSide / 100 * offset) || 0;
 	const canvas = await createCanvas(width, height, background);
 	const sprite = await createSprite(sources, width, height, offsetPx);
 	const renderedSprite = await sprite.png().toBuffer();
@@ -113,8 +111,8 @@ async function createSprite(
 	offset: number
 ) {
 
-	const spriteWidth = width - offset * TWICE;
-	const spriteHeight = height - offset * TWICE;
+	const spriteWidth = width - offset * 2;
+	const spriteHeight = height - offset * 2;
 	const source = await getSuitableSourceBuffer(sources, spriteWidth, spriteHeight);
 	const sprite = Sharp(source);
 

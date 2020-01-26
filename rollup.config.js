@@ -7,28 +7,42 @@ import typescript from 'rollup-plugin-typescript2';
 import babel from 'rollup-plugin-babel';
 import shebang from 'rollup-plugin-add-shebang';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
+import browsers from 'browserslist-config-trigen/browsers';
 import pkg from './package.json';
 
-const plugins = [
-	tslint({
-		exclude:    ['**/*.json', 'node_modules/**'],
-		throwError: true
-	}),
-	commonjs(),
-	typescript(),
-	babel({
-		extensions: [
-			...DEFAULT_EXTENSIONS,
-			'ts',
-			'tsx'
-		],
-		runtimeHelpers: true
-	})
-];
+const babelConfig = {
+	extensions: [
+		...DEFAULT_EXTENSIONS,
+		'ts',
+		'tsx'
+	],
+	runtimeHelpers: true
+};
+
+function getPlugins(forBrowsers = false) {
+	return [
+		tslint({
+			exclude:    ['**/*.json', 'node_modules/**'],
+			throwError: true
+		}),
+		commonjs(),
+		typescript(),
+		babel(forBrowsers ? {
+			...babelConfig,
+			presets:        [
+				['babel-preset-trigen', {
+					targets: {
+						browsers
+					}
+				}]
+			]
+		} : babelConfig)
+	];
+}
 
 export default [{
 	input:    'src/index.ts',
-	plugins,
+	plugins:  getPlugins(),
 	external: external(pkg, true),
 	output:   {
 		file:      pkg.main,
@@ -37,9 +51,18 @@ export default [{
 		sourcemap: 'inline'
 	}
 }, {
+	input:    'src/core.ts',
+	plugins:  getPlugins(true),
+	external: external(pkg, true),
+	output:   {
+		file:      'lib/core.js',
+		format:    'es',
+		sourcemap: 'inline'
+	}
+}, {
 	input:    'src/cli.ts',
 	plugins:  [
-		...plugins,
+		...getPlugins(),
 		shebang()
 	],
 	external: () => true,
@@ -51,7 +74,7 @@ export default [{
 	}
 }, {
 	input:    'src/stream.ts',
-	plugins,
+	plugins:  getPlugins(),
 	external: () => true,
 	output:   {
 		file:      'lib/stream.js',

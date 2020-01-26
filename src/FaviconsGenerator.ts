@@ -43,7 +43,7 @@ export interface IConfig {
 
 type SupportedExtension = keyof typeof extensions;
 
-export default abstract class FaviconsGenerator {
+export abstract class FaviconsGenerator {
 
 	protected readonly config: IConfig = {};
 

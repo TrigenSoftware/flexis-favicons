@@ -5,6 +5,11 @@
 		"webpack": false
 	},
 	{
+		"path": "lib/core.js",
+		"limit": "35 KB",
+		"webpack": false
+	},
+	{
 		"path": "lib/cli.js",
 		"limit": "2 KB",
 		"webpack": false
