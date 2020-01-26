@@ -13,7 +13,8 @@ export {
 } from './getHtmlHeadersMarkup';
 
 export {
-	IConfig
+	IConfig,
+	FaviconsGeneratorBase as FaviconsGenerator
 };
 
 export default class FaviconsGenerator extends FaviconsGeneratorBase {
