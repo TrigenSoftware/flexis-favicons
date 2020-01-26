@@ -7,7 +7,9 @@ import {
 import {
 	getCompleteIconConfig
 } from '../src/icons';
-import getHtmlHeadersMarkup from '../src/getHtmlHeadersMarkup';
+import {
+	getHtmlHeadersMarkup
+} from '../src/getHtmlHeadersMarkup';
 import {
 	svg,
 	png,
