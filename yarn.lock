@@ -2815,9 +2815,9 @@ canvas@^2.6.1:
     simple-get "^3.0.3"
 
 canvg@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/canvg/-/canvg-3.0.4.tgz#b0107a70cbde348d3999a81df4a0b3a21dac1480"
-  integrity sha512-kHVcM7yDtmklXgt6CTUARUqraRfSsncH3djAEcF5/f45P32MszMyhFMNu+UTPUQjvPdYkIFWy4BQNS5BNVIl7Q==
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/canvg/-/canvg-3.0.5.tgz#73accf63be5a214674356f605f724a6973d6e2de"
+  integrity sha512-oIfE6EUhIxR6+jC76sAATLbcKtwYZTfdU6AEUpWOJfzL02Oh4fTnsdfph3fE5KPM9v2bCK8mcPsFoq0IGOV79g==
   dependencies:
     "@babel/runtime" "^7.6.3"
     "@types/raf" "^3.4.0"
