@@ -64,7 +64,7 @@
     "to-ico": "^1.1.5",
     "vinyl": "^2.1.0",
     "vinyl-fs": "^3.0.3",
-    "xmldom": "^0.2.1"
+    "xmldom": "^0.3.0"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^3.0.0",
