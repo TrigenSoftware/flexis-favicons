@@ -24,14 +24,13 @@ export default {
  */
 function getFaviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
 	return Object.entries(iconsToGenerate.favicon).map(([filename, {
-		sizes,
 		width,
 		height
 	}]) => {
 
 		const header: IHtmlHeader = {
 			tagName: 'link',
-			rel:     sizes ? 'shortcut icon' : 'icon',
+			rel:     'icon',
 			href:    applyPath(path, filename)
 		};
 

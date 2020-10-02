@@ -1,17 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renderIcon should render better quality from svg source 1`] = `"576b4253aacd3eea97873366db538504348c306e"`;
+exports[`renderIcon should render better quality from svg source 1`] = `"0fc9ff70d45de965e3c8e69e291e15c7828f9182"`;
 
 exports[`renderIcon should render better quality from svg source 2`] = `"c2826288f9c81d0a83c51ce4a9b868d3428d5a0a"`;
 
-exports[`renderIcon should render correct icon from png 1`] = `"74cab8efa35abcb9b6789cbf395f9ca2bc71012a"`;
+exports[`renderIcon should render correct icon from png 1`] = `"a252d04655bb73f59c0f8f9dea1c1898ca6bd7e5"`;
 
 exports[`renderIcon should render correct icon from svg 1`] = `"76026a4d85751a41a803bc988c188a315b063fe2"`;
 
-exports[`renderIcon should render correct rotated icon from png 1`] = `"5969a63e0deee15253582c4b9b90778f0f667d8e"`;
+exports[`renderIcon should render correct non-square icon from png 1`] = `"2b20785e5b2f23966ed0b9113b1de060542d7fc5"`;
 
-exports[`renderIcon should render correct rotated icon from svg 1`] = `"8ba13a98231c7d00e969682383351b826a69dc8b"`;
-
-exports[`renderIcon should render correct rotated non-square icon from png 1`] = `"b923c1bc735ed26b20b8b30382bfa58479da22d7"`;
-
-exports[`renderIcon should render correct rotated non-square icon from svg 1`] = `"7f6b692d6228dd85e8a63bb3ec3e762820477fe8"`;
+exports[`renderIcon should render correct non-square icon from svg 1`] = `"7f6b692d6228dd85e8a63bb3ec3e762820477fe8"`;

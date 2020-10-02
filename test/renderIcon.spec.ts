@@ -43,33 +43,7 @@ describe('renderIcon', () => {
 		expect(sha1(icon)).toMatchSnapshot();
 	});
 
-	it('should render correct rotated icon from svg', async () => {
-
-		const icon = await renderIcon([svg], {
-			width:      128,
-			height:     128,
-			background: 'blue',
-			offset:     25
-		});
-
-		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg_rotated.png'), icon);
-		expect(sha1(icon)).toMatchSnapshot();
-	});
-
-	it('should render correct rotated icon from png', async () => {
-
-		const icon = await renderIcon([png], {
-			width:      128,
-			height:     128,
-			background: 'blue',
-			offset:     25
-		});
-
-		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png_rotated.png'), icon);
-		expect(sha1(icon)).toMatchSnapshot();
-	});
-
-	it('should render correct rotated non-square icon from svg', async () => {
+	it('should render correct non-square icon from svg', async () => {
 
 		const icon = await renderIcon([svg], {
 			width:      256,
@@ -78,11 +52,11 @@ describe('renderIcon', () => {
 			offset:     0
 		});
 
-		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg_rotated_non-square.png'), icon);
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_svg_non-square.png'), icon);
 		expect(sha1(icon)).toMatchSnapshot();
 	});
 
-	it('should render correct rotated non-square icon from png', async () => {
+	it('should render correct non-square icon from png', async () => {
 
 		const icon = await renderIcon([png], {
 			width:      256,
@@ -91,7 +65,7 @@ describe('renderIcon', () => {
 			offset:     0
 		});
 
-		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png_rotated_non-square.png'), icon);
+		fs.writeFileSync(path.join(__dirname, 'artifacts', 'renderIcon_png_non-square.png'), icon);
 		expect(sha1(icon)).toMatchSnapshot();
 	});
 
