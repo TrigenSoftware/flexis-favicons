@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>@flexis/favicons</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for @flexis/favicons">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -202,7 +202,7 @@ yarn <span class="hljs-built_in">exec</span> -- favicons [...sources] [...option
 				<pre><code class="language-sh"><span class="hljs-comment"># From SVG</span>
 favicons src/favicon.svg --manifest src/manifest.json --headers -d build
 <span class="hljs-comment"># From some PNGs with different sizes</span>
-favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span class="hljs-string">"#FACE8D"</span> --headers -d build</code></pre>
+favicons <span class="hljs-string">&quot;src/icons/*.png&quot;</span> --background <span class="hljs-string">&quot;#FACE8D&quot;</span> --headers -d build</code></pre>
 				<a href="#configuration" id="configuration" style="color: inherit; text-decoration: none;">
 					<h4>Configuration</h4>
 				</a>
@@ -212,7 +212,7 @@ favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span c
     <span class="hljs-comment">/**
      * Source icon(s) glob patterns.
      */</span>
-    src?: <span class="hljs-built_in">string</span>|<span class="hljs-built_in">string</span>[];
+    src?: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[];
     <span class="hljs-comment">/**
      * Relative public path to use in webmanifest and html-headers.
      */</span>
@@ -224,7 +224,7 @@ favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span c
     <span class="hljs-comment">/**
      * Path to webmanifest or webmanifest object to add icons. Also can use it to get background color.
      */</span>
-    manifest?: <span class="hljs-built_in">string</span>|IManifestConfig;
+    manifest?: <span class="hljs-built_in">string</span> | IManifestConfig;
     <span class="hljs-comment">/**
      * Output icons configuration.
      */</span>
@@ -232,7 +232,7 @@ favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span c
     <span class="hljs-comment">/**
      * Create html-file with headers for icons.
      */</span>
-    headers?: <span class="hljs-built_in">boolean</span>|IHeadersConfig;
+    headers?: <span class="hljs-built_in">boolean</span> | IHeadersConfig;
     <span class="hljs-comment">/**
      * Print additional info about progress.
      */</span>
@@ -251,16 +251,16 @@ favicons <span class="hljs-string">"src/icons/*.png"</span> --background <span c
 					<h3>Gulp</h3>
 				</a>
 				<p>Also you can use <code>@flexis/favicons</code> with <a href="https://github.com/gulpjs/gulp">Gulp</a>:</p>
-				<pre><code class="language-js"><span class="hljs-keyword">import</span> favicons <span class="hljs-keyword">from</span> <span class="hljs-string">'@flexis/favicons/lib/stream'</span>;
-<span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/manifest.json'</span>;
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> favicons <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@flexis/favicons/lib/stream&#x27;</span>;
+<span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./src/manifest.json&#x27;</span>;
 
-gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
-    gulp.src(<span class="hljs-string">'src/favicon.svg'</span>)
+gulp.task(<span class="hljs-string">&#x27;favicons&#x27;</span>, <span class="hljs-function">() =&gt;</span>
+    gulp.src(<span class="hljs-string">&#x27;src/favicon.svg&#x27;</span>)
         .pipe(favicons({
             manifest,
             <span class="hljs-attr">headers</span>: <span class="hljs-literal">true</span>
         }))
-        .pipe(gulp.dest(<span class="hljs-string">'build'</span>))
+        .pipe(gulp.dest(<span class="hljs-string">&#x27;build&#x27;</span>))
 );</code></pre>
 				<p>Plugin options:</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">interface</span> IPluginConfig {
@@ -283,7 +283,7 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
     <span class="hljs-comment">/**
      * Create html-file with headers for icons.
      */</span>
-    headers?: <span class="hljs-built_in">boolean</span>|IHeadersConfig;
+    headers?: <span class="hljs-built_in">boolean</span> | IHeadersConfig;
     <span class="hljs-comment">/**
      * Print additional info about progress.
      */</span>
@@ -313,16 +313,16 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
 				</a>
 				<pre><code class="language-js"><span class="hljs-keyword">import</span> {
     promises <span class="hljs-keyword">as</span> fs
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'fs'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;fs&#x27;</span>;
 <span class="hljs-keyword">import</span> FaviconsGenerator, {
     getHtmlHeadersMarkup
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'@flexis/favicons'</span>;
-<span class="hljs-keyword">import</span> Vinyl <span class="hljs-keyword">from</span> <span class="hljs-string">'vinyl'</span>;
-<span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">'./src/manifest.json'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@flexis/favicons&#x27;</span>;
+<span class="hljs-keyword">import</span> Vinyl <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vinyl&#x27;</span>;
+<span class="hljs-keyword">import</span> manifest <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./src/manifest.json&#x27;</span>;
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generate</span>(<span class="hljs-params"></span>) </span>{
 
-    <span class="hljs-keyword">const</span> path = <span class="hljs-string">'src/favicon.svg'</span>;
+    <span class="hljs-keyword">const</span> path = <span class="hljs-string">&#x27;src/favicon.svg&#x27;</span>;
     <span class="hljs-keyword">const</span> contents = <span class="hljs-keyword">await</span> fs.readFile(path);
     <span class="hljs-keyword">const</span> source = <span class="hljs-keyword">new</span> Vinyl({
         path,
@@ -334,19 +334,19 @@ gulp.task(<span class="hljs-string">'favicons'</span>, () =&gt;
     <span class="hljs-keyword">const</span> icons = favicons.generateIcons(source);
 
     <span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> icon <span class="hljs-keyword">of</span> icons) {
-        icon.base = <span class="hljs-string">'./build'</span>;
+        icon.base = <span class="hljs-string">&#x27;./build&#x27;</span>;
         <span class="hljs-keyword">await</span> fs.writeFile(icon.path, icon.contents);
     }
 
     <span class="hljs-keyword">const</span> headers = favicons.generateHtmlHeaders();
     <span class="hljs-keyword">const</span> html = getHtmlHeadersMarkup(headers);
 
-    <span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">'build/favicons.html'</span>, html);
+    <span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">&#x27;build/favicons.html&#x27;</span>, html);
 
     <span class="hljs-keyword">const</span> manifest = favicons.generateManifset();
     <span class="hljs-keyword">const</span> json = <span class="hljs-built_in">JSON</span>.stringify(manifest);
 
-    <span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">'build/manifest.json'</span>, json);
+    <span class="hljs-keyword">await</span> fs.writeFile(<span class="hljs-string">&#x27;build/manifest.json&#x27;</span>, json);
 }
 
 generate();</code></pre>
@@ -359,44 +359,44 @@ generate();</code></pre>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_faviconsgenerator_.html">&quot;<wbr>Favicons<wbr>Generator&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_faviconsgenerator_.html">&quot;src/<wbr>Favicons<wbr>Generator&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_cli_.html">&quot;cli&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_cli_.html">&quot;src/cli&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_core_.html">&quot;core&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_core_.html">&quot;src/core&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_defaults_.html">&quot;defaults&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_defaults_.html">&quot;src/defaults&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_extensions_.html">&quot;extensions&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_extensions_.html">&quot;src/extensions&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_gethtmlheadersmarkup_.html">&quot;get<wbr>Html<wbr>Headers<wbr>Markup&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_gethtmlheadersmarkup_.html">&quot;src/get<wbr>Html<wbr>Headers<wbr>Markup&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_htmlheaders_.html">&quot;html<wbr>Headers&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_htmlheaders_.html">&quot;src/html<wbr>Headers&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_icons_.html">&quot;icons&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_icons_.html">&quot;src/icons&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_image_.html">&quot;image&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_image_.html">&quot;src/image&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">&quot;index&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_index_.html">&quot;src/index&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_stream_.html">&quot;stream&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_stream_.html">&quot;src/stream&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_types_.html">&quot;types&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_types_.html">&quot;src/types&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_util_.html">&quot;util&quot;</a>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_util_.html">&quot;src/util&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -412,57 +412,16 @@ generate();</code></pre>
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
 				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
@@ -472,6 +431,5 @@ generate();</code></pre>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

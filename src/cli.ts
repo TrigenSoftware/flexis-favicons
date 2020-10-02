@@ -146,10 +146,10 @@ if (help) {
 }
 
 function configIcon(
-	icon: boolean|IIconConfig,
+	icon: boolean | IIconConfig,
 	skip: boolean,
 	background: string,
-	offset: string|number
+	offset: string | number
 ) {
 
 	if (skip || !background && !offset && icon === false) {

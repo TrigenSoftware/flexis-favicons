@@ -67,10 +67,10 @@ export abstract class FaviconsGenerator {
 
 	/**
 	 * Create favicons form sources.
-	 * @param  sources - Favicons sources.
-	 * @return Results of handling.
+	 * @param sources - Favicons sources.
+	 * @returns Results of handling.
 	 */
-	async *generateIcons(source: Vinyl|Vinyl[]) {
+	async *generateIcons(source: Vinyl | Vinyl[]) {
 
 		const sources = Array.isArray(source)
 			? source
@@ -111,7 +111,7 @@ export abstract class FaviconsGenerator {
 
 	/**
 	 * Create full manifest object with icons.
-	 * @return Manifest object.
+	 * @returns Manifest object.
 	 */
 	generateManifset(): IManifestConfig {
 
@@ -140,8 +140,8 @@ export abstract class FaviconsGenerator {
 
 	/**
 	 * Create HTML-headers for target icons.
-	 * @param  headersConfig - Custom headers config.
-	 * @return Array of headers objects. You can get HTML-markup with `getHtmlHeadersMarkup` helper.
+	 * @param headersConfig - Custom headers config.
+	 * @returns Array of headers objects. You can get HTML-markup with `getHtmlHeadersMarkup` helper.
 	 */
 	generateHtmlHeaders(headersConfig: IHeadersConfig = {}): IHtmlHeader[] {
 
@@ -165,9 +165,9 @@ export abstract class FaviconsGenerator {
 
 	/**
 	 * Create icons of given type.
-	 * @param  iconsType - Type of needed icons.
-	 * @param  sources - Icons sources.
-	 * @return Icons of given type.
+	 * @param iconsType - Type of needed icons.
+	 * @param sources - Icons sources.
+	 * @returns Icons of given type.
 	 */
 	protected async *generateIconsOfType(iconsType: string, sources: Vinyl[]) {
 

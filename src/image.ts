@@ -26,8 +26,8 @@ const nodeCanvgPreset = presets.node({
 
 /**
  * Attach image metadata to the vinyl file.
- * @param  source - Image file.
- * @return Source image file with attached metadata.
+ * @param source - Image file.
+ * @returns Source image file with attached metadata.
  */
 export async function attachMetadata(source: Vinyl) {
 
@@ -50,9 +50,9 @@ export async function attachMetadata(source: Vinyl) {
 
 /**
  * Render icon.
- * @param  sources - Array of sources.
- * @param  renderConfig - Render config.
- * @return Rendered icon.
+ * @param sources - Array of sources.
+ * @param renderConfig - Render config.
+ * @returns Rendered icon.
  */
 export async function renderIcon(sources: Vinyl[], {
 	width,
@@ -76,10 +76,10 @@ export async function renderIcon(sources: Vinyl[], {
 
 /**
  * Create canvas for rendering.
- * @param  width - Width of canvas.
- * @param  height - Height of canvas.
- * @param  background - Background color of canvas.
- * @return Canvas.
+ * @param width - Width of canvas.
+ * @param height - Height of canvas.
+ * @param background - Background color of canvas.
+ * @returns Canvas.
  */
 function createCanvas(
 	width: number,
@@ -98,11 +98,11 @@ function createCanvas(
 
 /**
  * Create sprite.
- * @param  sources - Sprite sources.
- * @param  width - Width of sprite.
- * @param  height - Height of sprite.
- * @param  offset - Offset from canvas edges.
- * @return Sprite.
+ * @param sources - Sprite sources.
+ * @param width - Width of sprite.
+ * @param height - Height of sprite.
+ * @param offset - Offset from canvas edges.
+ * @returns Sprite.
  */
 async function createSprite(
 	sources: Vinyl[],
@@ -125,10 +125,10 @@ async function createSprite(
 
 /**
  * Get suitable source by size.
- * @param  sources - Array of sources.
- * @param  width - Needed width.
- * @param  height - Needed height.
- * @return Siutable source.
+ * @param sources - Array of sources.
+ * @param width - Needed width.
+ * @param height - Needed height.
+ * @returns Siutable source.
  */
 async function getSuitableSourceBuffer(
 	sources: Vinyl[],

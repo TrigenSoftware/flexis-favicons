@@ -18,7 +18,7 @@ interface IPluginConfig extends IConfig {
 	/**
 	 * Create html-file with headers for icons.
 	 */
-	headers?: boolean|IHeadersConfig;
+	headers?: boolean | IHeadersConfig;
 	/**
 	 * Print additional info about progress.
 	 */

@@ -99,7 +99,7 @@ interface IConfig {
     /**
      * Source icon(s) glob patterns.
      */
-    src?: string|string[];
+    src?: string | string[];
     /**
      * Relative public path to use in webmanifest and html-headers.
      */
@@ -111,7 +111,7 @@ interface IConfig {
     /**
      * Path to webmanifest or webmanifest object to add icons. Also can use it to get background color.
      */
-    manifest?: string|IManifestConfig;
+    manifest?: string | IManifestConfig;
     /**
      * Output icons configuration.
      */
@@ -119,7 +119,7 @@ interface IConfig {
     /**
      * Create html-file with headers for icons.
      */
-    headers?: boolean|IHeadersConfig;
+    headers?: boolean | IHeadersConfig;
     /**
      * Print additional info about progress.
      */
@@ -131,9 +131,9 @@ interface IConfig {
 }
 ```
 
-- [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html)
-- [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html)
-- [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html)
+- [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_src_types_.iiconsconfig.html)
+- [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_src_types_.imanifestconfig.html)
+- [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_src_types_.iheadersconfig.html)
 
 ### Gulp
 
@@ -176,7 +176,7 @@ interface IPluginConfig {
     /**
      * Create html-file with headers for icons.
      */
-    headers?: boolean|IHeadersConfig;
+    headers?: boolean | IHeadersConfig;
     /**
      * Print additional info about progress.
      */
@@ -184,9 +184,9 @@ interface IPluginConfig {
 }
 ```
 
-- [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_icons_.iiconsconfig.html)
-- [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_manifest_.imanifestconfig.html)
-- [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_htmlheaders_.iheadersconfig.html)
+- [`IIconsConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_src_types_.iiconsconfig.html)
+- [`IManifestConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_src_types_.imanifestconfig.html)
+- [`IHeadersConfig`](https://trigensoftware.github.io/flexis-favicons/interfaces/_src_types_.iheadersconfig.html)
 
 ### JS API
 

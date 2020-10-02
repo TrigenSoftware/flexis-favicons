@@ -14,8 +14,8 @@ const attributeNamesOrder = [
 
 /**
  * Get order index of attribute name.
- * @param  attributeName - Target attribute name.
- * @return Index.
+ * @param attributeName - Target attribute name.
+ * @returns Index.
  */
 function getAttributeOrder(attributeName: string) {
 
@@ -28,9 +28,9 @@ function getAttributeOrder(attributeName: string) {
 
 /**
  * Comparator function to sort attributes entries.
- * @param  a - Left attribute entry.
- * @param  b - Right attribute entry.
- * @return Result of comparation.
+ * @param a - Left attribute entry.
+ * @param b - Right attribute entry.
+ * @returns Result of comparation.
  */
 function comparator([a]: [string, any], [b]: [string, any]) {
 	return getAttributeOrder(a) - getAttributeOrder(b);
@@ -38,8 +38,8 @@ function comparator([a]: [string, any], [b]: [string, any]) {
 
 /**
  * Make attribute string from entry.
- * @param  entry - Entry with attribute name and value.
- * @return Attribute string.
+ * @param entry - Entry with attribute name and value.
+ * @returns Attribute string.
  */
 function entryToString([key, value]: [string, string]) {
 	return `${key}="${String(value)}"`;
@@ -47,10 +47,10 @@ function entryToString([key, value]: [string, string]) {
 
 /**
  * Get HTML-markup from objects.
- * @param  header - Object or array of objects with header info.
- * @return HTML-markup.
+ * @param header - Object or array of objects with header info.
+ * @returns HTML-markup.
  */
-export function getHtmlHeadersMarkup(header: IHtmlHeader|IHtmlHeader[]): string {
+export function getHtmlHeadersMarkup(header: IHtmlHeader | IHtmlHeader[]): string {
 
 	if (Array.isArray(header)) {
 		return header.map(getHtmlHeadersMarkup).join('\n');

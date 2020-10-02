@@ -7,8 +7,8 @@ export const extensions = {
 
 /**
  * Check image type
- * @param  type - Image extension without dot.
- * @return Image type is supported or not.
+ * @param type - Image extension without dot.
+ * @returns Image type is supported or not.
  */
 export function isSupportedType(type: string): boolean {
 	return extensions.hasOwnProperty(type);
@@ -16,8 +16,8 @@ export function isSupportedType(type: string): boolean {
 
 /**
  * Check is "ico" or not.
- * @param  filename - File name to check.
- * @return Result of checking.
+ * @param filename - File name to check.
+ * @returns Result of checking.
  */
 export function isIco(filename: string) {
 	return path.extname(filename) === '.ico';
@@ -25,8 +25,8 @@ export function isIco(filename: string) {
 
 /**
  * Check is "svg" or not.
- * @param  filename - File name to check.
- * @return Result of checking.
+ * @param filename - File name to check.
+ * @returns Result of checking.
  */
 export function isSvg(filename: string) {
 	return path.extname(filename) === '.svg';

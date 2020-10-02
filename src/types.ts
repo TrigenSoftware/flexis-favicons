@@ -5,14 +5,14 @@
 
 export interface IIconConfig {
 	offset?: number;
-	background?: boolean|string;
+	background?: boolean | string;
 }
 
 export interface IIconsConfig {
 	favicon?: boolean;
-	android?: boolean|IIconConfig;
-	apple?: boolean|IIconConfig;
-	appleStartup?: boolean|IIconConfig;
+	android?: boolean | IIconConfig;
+	apple?: boolean | IIconConfig;
+	appleStartup?: boolean | IIconConfig;
 }
 
 export interface ISize {
@@ -46,11 +46,11 @@ export interface IManifestConfig {
 	name?: string;
 	short_name?: string;
 	description?: string;
-	dir?: 'auto'|'ltr'|'rtl';
+	dir?: 'auto' | 'ltr' | 'rtl';
 	lang?: string;
-	display?: 'fullscreen'|'standalone'|'minimal-ui'|'browser';
-	orientation?: 'any'|'natural'|'landscape'|'landscape-primary'
-		|'landscape-secondary'|'portrait'|'portrait-primary'|'portrait-secondary';
+	display?: 'fullscreen' | 'standalone' | 'minimal-ui' | 'browser';
+	orientation?: 'any' | 'natural' | 'landscape' | 'landscape-primary'
+		|'landscape-secondary' | 'portrait' | 'portrait-primary' | 'portrait-secondary';
 	scope?: string;
 	start_url?: string;
 	background_color?: string;
@@ -67,8 +67,8 @@ export interface IManifestConfig {
 export interface IHeadersConfig {
 	path?: string;
 	manifest?: IManifestConfig;
-	webAppCapable?: 'yes'|'no';
-	webAppStatusBarStyle?: 'default'|'black'|'black-translucent';
+	webAppCapable?: 'yes' | 'no';
+	webAppStatusBarStyle?: 'default' | 'black' | 'black-translucent';
 }
 
 export interface IHtmlHeader {

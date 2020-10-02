@@ -13,10 +13,10 @@ interface IIconsToGenerate {
 
 /**
  * Get complete icon config from shirt config.
- * @param  iconsType - Icons type name.
- * @param  iconsConfig - Icons shirt config.
- * @param  manifestConfig - Config to get background color.
- * @return Complete config.
+ * @param iconsType - Icons type name.
+ * @param iconsConfig - Icons shirt config.
+ * @param manifestConfig - Config to get background color.
+ * @returns Complete config.
  */
 export function getCompleteIconConfig(
 	iconsType: string,
@@ -24,7 +24,7 @@ export function getCompleteIconConfig(
 	{ background_color: background }: IManifestConfig
 ): IIconConfig {
 
-	const iconConfigSource: boolean|IIconConfig = iconsConfig[iconsType];
+	const iconConfigSource: boolean | IIconConfig = iconsConfig[iconsType];
 
 	if (!iconConfigSource) {
 		return null;

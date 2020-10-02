@@ -19,8 +19,8 @@ export default {
 
 /**
  * Get "favicon" headers.
- * @param  headersConfig - Config params.
- * @return Array of headers objects.
+ * @param headersConfig - Config params.
+ * @returns Array of headers objects.
  */
 function getFaviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
 	return Object.entries(iconsToGenerate.favicon).map(([filename, {
@@ -45,8 +45,8 @@ function getFaviconHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
 
 /**
  * Get "android" headers.
- * @param  headersConfig - Config params.
- * @return Array of headers objects.
+ * @param headersConfig - Config params.
+ * @returns Array of headers objects.
  */
 function getAndroidHeaders({
 	path,
@@ -91,8 +91,8 @@ function getAndroidHeaders({
 
 /**
  * Get "apple" headers.
- * @param  headersConfig - Config params.
- * @return Array of headers objects.
+ * @param headersConfig - Config params.
+ * @returns Array of headers objects.
  */
 function getAppleHeaders({
 	path,
@@ -141,8 +141,8 @@ function getAppleHeaders({
 
 /**
  * Calculate media query for apple startup image.
- * @param  iconToGenerateConfig - Config with icon info.
- * @return Media query for device.
+ * @param iconToGenerateConfig - Config with icon info.
+ * @returns Media query for device.
  */
 function getAppleStartupMediaQuery(
 	{
@@ -175,8 +175,8 @@ function getAppleStartupMediaQuery(
 
 /**
  * Get "apple startup" headers.
- * @param  headersConfig - Config params.
- * @return Array of headers objects.
+ * @param headersConfig - Config params.
+ * @returns Array of headers objects.
  */
 function getAppleStartupHeaders({ path }: IHeadersConfig): IHtmlHeader[] {
 	return Object.entries(iconsToGenerate.appleStartup).map(([filename, config]) => ({
