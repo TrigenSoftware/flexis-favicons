@@ -2,9 +2,9 @@ import {
 	external
 } from '@trigen/scripts-plugin-rollup/helpers';
 import tslint from 'rollup-plugin-tslint';
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import shebang from 'rollup-plugin-add-shebang';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import browsers from 'browserslist-config-trigen/browsers';
@@ -16,7 +16,8 @@ const babelConfig = {
 		'ts',
 		'tsx'
 	],
-	runtimeHelpers: true
+	babelHelpers:       'runtime',
+	skipPreflightCheck: true
 };
 
 function getPlugins(forBrowsers = false) {
@@ -31,6 +32,7 @@ function getPlugins(forBrowsers = false) {
 			...babelConfig,
 			presets:        [
 				['babel-preset-trigen', {
+					env: 'lib',
 					targets: {
 						browsers
 					}
@@ -65,7 +67,7 @@ export default [{
 		...getPlugins(),
 		shebang()
 	],
-	external: () => true,
+	external: _ => !_.endsWith('src/cli.ts'),
 	output:   {
 		file:      'lib/cli.js',
 		format:    'cjs',
@@ -75,7 +77,7 @@ export default [{
 }, {
 	input:    'src/stream.ts',
 	plugins:  getPlugins(),
-	external: () => true,
+	external: _ => !_.endsWith('src/stream.ts'),
 	output:   {
 		file:      'lib/stream.js',
 		format:    'cjs',
