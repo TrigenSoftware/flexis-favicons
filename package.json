@@ -79,7 +79,7 @@
     "@trigen/scripts-preset-lib": "^6.0.0",
     "rollup-plugin-add-shebang": "^0.3.1",
     "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript2": "^0.27.3"
+    "rollup-plugin-typescript2": "^0.29.0"
   },
   "files": [
     "lib"
