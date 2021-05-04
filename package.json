@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^5.2.1",
-    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-commonjs": "^18.1.0",
     "@size-limit/preset-small-lib": "^4.6.0",
     "@trigen/scripts": "^6.0.0",
     "@trigen/scripts-plugin-babel": "^6.1.1",
