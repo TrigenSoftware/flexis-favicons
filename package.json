@@ -63,7 +63,7 @@
     "to-ico": "^1.1.5",
     "vinyl": "^2.1.0",
     "vinyl-fs": "^3.0.3",
-    "xmldom": "^0.3.0"
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^5.2.1",
