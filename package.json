@@ -55,7 +55,7 @@
     "canvg": "^3.0.2",
     "chalk": "^4.1.0",
     "easy-table": "^1.1.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "omit-empty": "^1.0.0",
     "rcfile": "^1.0.3",
     "sharp": "^0.26.1",
