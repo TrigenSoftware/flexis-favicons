@@ -58,7 +58,7 @@
     "node-fetch": "^2.6.0",
     "omit-empty": "^1.0.0",
     "rcfile": "^1.0.3",
-    "sharp": "^0.26.1",
+    "sharp": "^0.30.5",
     "through2-concurrent": "^2.0.0",
     "to-ico": "^1.1.5",
     "vinyl": "^2.1.0",
